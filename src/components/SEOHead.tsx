@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
   title?: string;
@@ -6,79 +6,45 @@ interface SEOHeadProps {
   keywords?: string;
   canonical?: string;
   ogImage?: string;
+  ogType?: string;
 }
 
 export const SEOHead = ({
-  title,
-  description,
-  keywords,
-  canonical,
-  ogImage,
+  title = "Angeli Gardens | Premium Landscaping & Garden Services | London, Surrey & Berkshire",
+  description = "Angeli Gardens - Your trusted landscaping experts. Checkatrade approved garden maintenance, patios, decking, fencing across London, Surrey & Berkshire. Rated 9.45/10. Free quotes.",
+  keywords = "Angeli Gardens, landscaping London, garden maintenance Surrey, landscaping services Berkshire, Checkatrade approved landscaper",
+  canonical = "https://www.angeligardens.co.uk",
+  ogImage = "https://storage.googleapis.com/gpt-engineer-file-uploads/1dJXwWZnvEdNuQxJzmejokIQllD2/social-images/social-1763163107906-logo.jpg",
+  ogType = "website"
 }: SEOHeadProps) => {
-  useEffect(() => {
-    const defaultTitle = "Angeli Gardens | Premium Landscaping & Garden Services | London, Surrey & Berkshire | Checkatrade Approved";
-    const defaultDescription = "Angeli Gardens - Your trusted landscaping experts. Angeli Gardens provides Checkatrade approved garden maintenance, patios, decking, fencing, and landscaping services across London, Surrey & Berkshire. Rated 9.75/10. Free quotes from Angeli Gardens.";
-    const defaultKeywords = "Angeli Gardens, Angeli Gardens landscaping, Angeli Gardens London, Angeli Gardens Surrey, Angeli Gardens Berkshire, landscaping London, garden maintenance Surrey, landscaping services Berkshire, garden design, patios, decking, turfing, hedge trimming, tree pruning, garden clearance, luxury landscaping, Checkatrade approved landscaper, Checkatrade gardener, landscaping near me, garden services London, garden maintenance Surrey, landscaping Berkshire";
-    const defaultCanonical = "https://www.angeligardens.co.uk";
-    const defaultOgImage = "https://storage.googleapis.com/gpt-engineer-file-uploads/1dJXwWZnvEdNuQxJzmejokIQllD2/social-images/social-1763163107906-logo.jpg";
-
-    // Update title
-    if (title) {
-      document.title = title;
-    }
-
-    // Update or create meta tags
-    const updateMetaTag = (name: string, content: string, attribute: string = "name") => {
-      let element = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
-      if (!element) {
-        element = document.createElement("meta");
-        element.setAttribute(attribute, name);
-        document.head.appendChild(element);
-      }
-      element.content = content;
-    };
-
-    // Update description
-    updateMetaTag("description", description || defaultDescription);
-    updateMetaTag("og:description", description || defaultDescription, "property");
-    updateMetaTag("twitter:description", description || defaultDescription);
-
-    // Update keywords
-    if (keywords) {
-      updateMetaTag("keywords", keywords);
-    }
-
-    // Update title meta tags
-    if (title) {
-      updateMetaTag("og:title", title, "property");
-      updateMetaTag("twitter:title", title);
-    }
-
-    // Update canonical
-    if (canonical) {
-      let canonicalLink = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
-      if (!canonicalLink) {
-        canonicalLink = document.createElement("link");
-        canonicalLink.rel = "canonical";
-        document.head.appendChild(canonicalLink);
-      }
-      canonicalLink.href = canonical;
-    }
-
-    // Update OG image
-    if (ogImage) {
-      updateMetaTag("og:image", ogImage, "property");
-      updateMetaTag("twitter:image", ogImage);
-    }
-
-    // Update OG URL
-    const currentUrl = canonical || window.location.href;
-    updateMetaTag("og:url", currentUrl, "property");
-    updateMetaTag("twitter:url", currentUrl);
-  }, [title, description, keywords, canonical, ogImage]);
-
-  return null;
+  return (
+    <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <link rel="canonical" href={canonical} />
+      
+      {/* Open Graph */}
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={canonical} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:site_name" content="Angeli Gardens" />
+      
+      {/* Twitter Card */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content={canonical} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      
+      {/* Additional SEO */}
+      <meta name="robots" content="index, follow, max-image-preview:large" />
+      <meta name="googlebot" content="index, follow" />
+    </Helmet>
+  );
 };
 
 export default SEOHead;
-

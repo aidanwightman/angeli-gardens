@@ -1,8 +1,25 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "angeligardens.co.uk"
+        }
+      ],
+      "destination": "https://www.angeligardens.co.uk/:path*",
+      "permanent": true,
+      "statusCode": 301
+    }
+  ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { 
+      "source": "/(.*)", 
+      "destination": "/index.html" 
+    }
   ],
   "headers": [
     {
@@ -19,7 +36,7 @@
       "headers": [
         {
           "key": "Content-Type",
-          "value": "application/xml"
+          "value": "application/xml; charset=utf-8"
         }
       ]
     }

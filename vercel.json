@@ -11,8 +11,7 @@
         }
       ],
       "destination": "https://www.angeligardens.co.uk/:path*",
-      "permanent": true,
-      "statusCode": 301
+      "permanent": true
     }
   ],
   "rewrites": [

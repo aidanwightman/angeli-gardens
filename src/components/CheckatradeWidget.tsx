@@ -71,14 +71,14 @@ export const CheckatradeWidget = ({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className={`bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl p-6 md:p-8 text-white shadow-xl ${className}`}
+      className={`bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl p-4 md:p-6 text-white shadow-xl ${className}`}
     >
       <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
         {/* Score Display */}
         <div className="flex-shrink-0">
           <div className="bg-white rounded-lg p-6 text-center shadow-lg">
-            <div className="text-5xl md:text-6xl font-bold text-gray-900 mb-2">4.9</div>
-            <div className="text-xl text-gray-600 font-semibold">/5</div>
+            <div className="text-4xl md:text-5xl font-bold text-gray-900 mb-1">4.9</div>
+            <div className="text-lg text-gray-600 font-semibold">/5</div>
             <div className="flex justify-center gap-1 mt-3">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
@@ -92,10 +92,10 @@ export const CheckatradeWidget = ({
           <h3 className="text-2xl md:text-3xl font-bold mb-3">
             Rated Excellent on Checkatrade
           </h3>
-          <p className="text-lg md:text-xl text-blue-100 mb-4">
+          <p className="text-lg md:text-xl text-blue-100 mb-2">
             See our <span className="font-semibold underline">29 reviews</span> on Checkatrade
           </p>
-          <p className="text-sm text-blue-200 mb-6">
+          <p className="text-xs text-blue-200 mb-4">
             Based on last 12 months
           </p>
           {showLink && (
@@ -121,7 +121,7 @@ export const CheckatradeWidget = ({
 
       {/* Checkatrade Widget Container - This will be populated by the Checkatrade script */}
       <div
-        className="checkatrade-widget mt-6"
+        className="checkatrade-widget mt-2"
         data-company-id="1165583"
       />
     </motion.div>

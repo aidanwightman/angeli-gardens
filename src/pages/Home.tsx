@@ -72,7 +72,7 @@ const Home = () => {
             className="max-w-2xl text-background"
           >
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-light mb-6 text-balance tracking-tight">
-              Angeli Gardens - Transform Your Outdoor Space
+              <span className="font-bold underline">Angeli Gardens</span> Transform Your Outdoor Space
             </h1>
             <p className="text-xl md:text-2xl mb-4 text-background/90 font-light">
               Angeli Gardens provides expert landscaping and garden services across London, Surrey & Berkshire
@@ -130,7 +130,7 @@ const Home = () => {
       </section>
 
       {/* Checkatrade Section */}
-      <section className="py-20 bg-background">
+      <section className="py-10 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

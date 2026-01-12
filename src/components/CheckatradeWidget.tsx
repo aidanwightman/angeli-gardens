@@ -29,7 +29,7 @@ export const CheckatradeWidget = ({
         <div className="flex items-center gap-2 bg-white rounded-lg px-3 py-2 shadow-md border border-gray-200">
           <div className="flex items-center gap-1">
             <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-            <span className="text-sm font-bold text-gray-900">9.75/10</span>
+            <span className="text-sm font-bold text-gray-900">4.9/5</span>
           </div>
           <span className="text-xs text-gray-600">Checkatrade</span>
         </div>
@@ -42,7 +42,7 @@ export const CheckatradeWidget = ({
       <div className={`bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg p-4 text-white ${className}`}>
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
-            <span className="text-2xl font-bold">9.75/10</span>
+            <span className="text-xl font-bold">4.9/5</span>
             <div className="flex gap-0.5">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="h-4 w-4 fill-yellow-300 text-yellow-300" />
@@ -77,8 +77,8 @@ export const CheckatradeWidget = ({
         {/* Score Display */}
         <div className="flex-shrink-0">
           <div className="bg-white rounded-lg p-6 text-center shadow-lg">
-            <div className="text-5xl md:text-6xl font-bold text-gray-900 mb-2">9.75</div>
-            <div className="text-xl text-gray-600 font-semibold">/10</div>
+            <div className="text-5xl md:text-6xl font-bold text-gray-900 mb-2">4.9</div>
+            <div className="text-xl text-gray-600 font-semibold">/5</div>
             <div className="flex justify-center gap-1 mt-3">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />

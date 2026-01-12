@@ -28,7 +28,7 @@ const FAQ = () => {
     },
     {
       question: "Are you Checkatrade approved?",
-      answer: "Yes! We are a Checkatrade approved business with an excellent 9.75/10 rating based on 456+ verified customer reviews. You can view our full Checkatrade profile and read all our reviews at https://www.checkatrade.com/trades/angeligardens",
+      answer: "Yes! We are a Checkatrade approved business with an excellent 4.9/5 rating based on 456+ verified customer reviews. You can view our full Checkatrade profile and read all our reviews at https://www.checkatrade.com/trades/angeligardens",
     },
     {
       question: "Do you provide free quotes?",
@@ -66,7 +66,7 @@ const FAQ = () => {
     },
     {
       question: "What makes you different from other landscapers?",
-      answer: "We combine over 10 years of experience with a genuine passion for creating beautiful outdoor spaces. We're Checkatrade approved with a 9.75/10 rating, fully insured, and come fully equipped. We're committed to quality craftsmanship, customer satisfaction, and sustainability. Every project is approached with attention to detail and a focus on exceeding expectations.",
+      answer: "We combine over 10 years of experience with a genuine passion for creating beautiful outdoor spaces. We're Checkatrade approved with a 4.9/5 rating, fully insured, and come fully equipped. We're committed to quality craftsmanship, customer satisfaction, and sustainability. Every project is approached with attention to detail and a focus on exceeding expectations.",
     },
   ];
 

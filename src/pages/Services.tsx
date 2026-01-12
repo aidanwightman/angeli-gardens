@@ -115,7 +115,7 @@ const Services = () => {
     <div>
       <SEOHead
         title="Landscaping & Garden Services in London, Surrey & Berkshire | Angeli Gardens"
-        description="Professional landscaping and garden services across London, Surrey & Berkshire. Checkatrade approved with 9.75/10 rating. Garden maintenance, patios, decking, fencing, turfing, and more. Free quotes."
+        description="Professional landscaping and garden services across London, Surrey & Berkshire. Checkatrade approved with 4.9/5 rating. Garden maintenance, patios, decking, fencing, turfing, and more. Free quotes."
         keywords="landscaping London, garden maintenance Surrey, landscaping Berkshire, patios London, decking Surrey, fencing Berkshire, turfing London, hedge trimming Surrey, tree pruning Berkshire, garden clearance London, Checkatrade approved landscaper"
         canonical="https://www.angeligardens.co.uk/services"
       />
@@ -200,7 +200,7 @@ const Services = () => {
               Comprehensive garden and landscaping solutions for private, communal and commercial properties across London, Surrey & Berkshire
             </p>
             <p className="text-lg text-primary-foreground/80">
-              <a href="https://www.checkatrade.com/trades/angeligardens" target="_blank" rel="noopener noreferrer" className="underline font-semibold">Checkatrade approved</a> with 9.75/10 rating - Trusted by 456+ customers
+              <a href="https://www.checkatrade.com/trades/angeligardens" target="_blank" rel="noopener noreferrer" className="underline font-semibold">Checkatrade approved</a> with 4.9/5 rating - Trusted by 456+ customers
             </p>
           </motion.div>
         </div>

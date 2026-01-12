@@ -9,21 +9,11 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
-import project4 from "@/assets/project-4.jpg";
-import homeCarousel1 from "@/assets/home-carousel-1.jpg";
-import homeCarousel2 from "@/assets/home-carousel-2.jpg";
-import homeCarousel3 from "@/assets/home-carousel-3.jpg";
-import homeCarousel4 from "@/assets/home-carousel-4.jpg";
-import homeCarousel5 from "@/assets/home-carousel-5.jpg";
 import lawnProject1 from "@/assets/lawn-project-1.jpg";
-import lawnProject2 from "@/assets/lawn-project-2.jpg";
-import lawnProject3 from "@/assets/lawn-project-3.jpg";
-import lawnProject4 from "@/assets/lawn-project-4.jpg";
-import lawnProject5 from "@/assets/lawn-project-5.jpg";
-import lawnProject6 from "@/assets/lawn-project-6.jpg";
+import Angeli from "@/assets/Angeli.jpeg";
+import Angeli2 from "@/assets/Angeli2.jpeg";
+import Angeli3 from "@/assets/Angeli3.jpeg";
+import Angeli4 from "@/assets/Angeli4.jpeg";
 import { ReviewsSection } from "@/components/ReviewsSection";
 import { CheckatradeWidget } from "@/components/CheckatradeWidget";
 import { SEOHead } from "@/components/SEOHead";
@@ -34,21 +24,11 @@ const Home = () => {
   );
 
   const carouselImages = [
-    homeCarousel1,
-    homeCarousel2,
-    homeCarousel3,
-    homeCarousel4,
-    homeCarousel5,
+    Angeli,
+    Angeli2,
+    Angeli3,
+    Angeli4,
     lawnProject1,
-    lawnProject2,
-    lawnProject3,
-    lawnProject4,
-    lawnProject5,
-    lawnProject6,
-    project1,
-    project2,
-    project3,
-    project4,
   ];
 
   const stats = [
@@ -100,7 +80,7 @@ const Home = () => {
               Angeli Gardens provides expert landscaping and garden services across London, Surrey & Berkshire
             </p>
             <p className="text-lg md:text-xl mb-8 text-background/80 font-light">
-              <a href="https://www.checkatrade.com/trades/angeligardens" target="_blank" rel="noopener noreferrer" className="underline font-semibold hover:text-background">Checkatrade approved</a> with 9.75/10 rating
+              <a href="https://www.checkatrade.com/trades/angeligardens" target="_blank" rel="noopener noreferrer" className="underline font-semibold hover:text-background">Checkatrade approved</a> with 4.9/5 rating
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" asChild className="text-lg h-14 px-8">
@@ -234,7 +214,7 @@ const Home = () => {
         >
           <MapPin size={36} />
         </motion.div>
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

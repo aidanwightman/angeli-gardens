@@ -66,8 +66,8 @@ const Reviews = () => {
   return (
     <div className="min-h-screen py-20">
       <SEOHead
-        title="Client Reviews & Testimonials | Angeli Gardens | Checkatrade 9.75/10"
-        description="Read genuine client reviews for Angeli Gardens. Checkatrade approved with 9.75/10 rating and 456+ reviews. See what our satisfied customers say about our landscaping and garden services in London, Surrey & Berkshire."
+        title="Client Reviews & Testimonials | Angeli Gardens | Checkatrade 4.9/5"
+        description="Read genuine client reviews for Angeli Gardens. Checkatrade approved with 4.9/5 rating and 456+ reviews. See what our satisfied customers say about our landscaping and garden services in London, Surrey & Berkshire."
         keywords="Angeli Gardens reviews, Checkatrade reviews, landscaping reviews London, garden services reviews Surrey, Checkatrade 9.75 rating, landscaping testimonials Berkshire"
         canonical="https://www.angeligardens.co.uk/reviews"
       />

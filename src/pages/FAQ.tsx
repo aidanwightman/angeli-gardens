@@ -28,7 +28,7 @@ const FAQ = () => {
     },
     {
       question: "Are you Checkatrade approved?",
-      answer: "Yes! We are a Checkatrade approved business with an excellent 4.9/5 rating based on 456+ verified customer reviews. You can view our full Checkatrade profile and read all our reviews at https://www.checkatrade.com/trades/angeligardens",
+      answer: "Yes! We are a Checkatrade approved business with an excellent 4.9/5 rating based on 29 verified customer reviews. You can view our full Checkatrade profile and read all our reviews at https://www.checkatrade.com/trades/angeligardens",
     },
     {
       question: "Do you provide free quotes?",
@@ -106,12 +106,12 @@ const FAQ = () => {
         keywords="landscaping FAQ, garden services questions, landscaping London FAQ, garden maintenance Surrey questions, Checkatrade approved landscaper FAQ, landscaping Berkshire FAQ"
         canonical="https://www.angeligardens.co.uk/faq"
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 bg-primary text-primary-foreground overflow-hidden">
         <div className="container mx-auto px-4">
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="inline-flex items-center gap-2 text-primary-foreground hover:text-primary-foreground/80 transition-colors mb-6"
           >
             <ArrowLeft size={20} />

@@ -9,7 +9,6 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import lawnProject1 from "@/assets/lawn-project-1.jpg";
 import Angeli from "@/assets/Angeli.jpeg";
 import Angeli2 from "@/assets/Angeli2.jpeg";
 import Angeli3 from "@/assets/Angeli3.jpeg";
@@ -28,7 +27,6 @@ const Home = () => {
     Angeli2,
     Angeli3,
     Angeli4,
-    lawnProject1,
   ];
 
   const stats = [

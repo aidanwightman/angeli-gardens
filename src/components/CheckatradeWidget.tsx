@@ -50,7 +50,7 @@ export const CheckatradeWidget = ({
             </div>
           </div>
         </div>
-        <p className="text-sm text-blue-100 mb-2">Based on 456 reviews</p>
+        <p className="text-sm text-blue-100 mb-2">Based on 29 reviews</p>
         {showLink && (
           <a
             href={checkatradeUrl}
@@ -93,7 +93,7 @@ export const CheckatradeWidget = ({
             Rated Excellent on Checkatrade
           </h3>
           <p className="text-lg md:text-xl text-blue-100 mb-4">
-            See our <span className="font-semibold underline">456 reviews</span> on Checkatrade
+            See our <span className="font-semibold underline">29 reviews</span> on Checkatrade
           </p>
           <p className="text-sm text-blue-200 mb-6">
             Based on last 12 months
@@ -121,8 +121,7 @@ export const CheckatradeWidget = ({
 
       {/* Checkatrade Widget Container - This will be populated by the Checkatrade script */}
       <div
-        id="checkatrade-widget-container"
-        className="mt-6"
+        className="checkatrade-widget mt-6"
         data-company-id="1165583"
       />
     </motion.div>

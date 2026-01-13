@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { CHECKATRADE_CONFIG } from "@/config/checkatradeConfig";
+import { useCheckatradeData } from "@/hooks/useCheckatradeData";
 
 interface CheckatradeWidgetProps {
   variant?: "default" | "compact" | "badge";
@@ -15,7 +17,9 @@ export const CheckatradeWidget = ({
   showLink = true,
   className = "",
 }: CheckatradeWidgetProps) => {
-  const checkatradeUrl = "https://www.checkatrade.com/trades/angeligardens";
+  const checkatradeUrl = CHECKATRADE_CONFIG.profileUrl;
+  const { rating, reviewCount, isLoading } = useCheckatradeData();
+  const maxRating = CHECKATRADE_CONFIG.maxRating;
 
   if (variant === "badge") {
     return (
@@ -29,7 +33,7 @@ export const CheckatradeWidget = ({
         <div className="flex items-center gap-2 bg-white rounded-lg px-3 py-2 shadow-md border border-gray-200">
           <div className="flex items-center gap-1">
             <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-            <span className="text-sm font-bold text-gray-900">4.9/5</span>
+            <span className="text-sm font-bold text-gray-900">{isLoading ? '...' : `${rating}/${maxRating}`}</span>
           </div>
           <span className="text-xs text-gray-600">Checkatrade</span>
         </div>
@@ -42,7 +46,7 @@ export const CheckatradeWidget = ({
       <div className={`bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg p-4 text-white ${className}`}>
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
-            <span className="text-xl font-bold">4.9/5</span>
+            <span className="text-xl font-bold">{isLoading ? '...' : `${rating}/${maxRating}`}</span>
             <div className="flex gap-0.5">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="h-4 w-4 fill-yellow-300 text-yellow-300" />
@@ -50,7 +54,7 @@ export const CheckatradeWidget = ({
             </div>
           </div>
         </div>
-        <p className="text-sm text-blue-100 mb-2">Based on 29 reviews</p>
+        <p className="text-sm text-blue-100 mb-2">Based on verified reviews</p>
         {showLink && (
           <a
             href={checkatradeUrl}
@@ -77,8 +81,8 @@ export const CheckatradeWidget = ({
         {/* Score Display */}
         <div className="flex-shrink-0">
           <div className="bg-white rounded-lg p-6 text-center shadow-lg">
-            <div className="text-4xl md:text-5xl font-bold text-gray-900 mb-1">4.9</div>
-            <div className="text-lg text-gray-600 font-semibold">/5</div>
+            <div className="text-4xl md:text-5xl font-bold text-gray-900 mb-1">{isLoading ? '...' : rating}</div>
+            <div className="text-lg text-gray-600 font-semibold">/{maxRating}</div>
             <div className="flex justify-center gap-1 mt-3">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
@@ -93,7 +97,7 @@ export const CheckatradeWidget = ({
             Rated Excellent on Checkatrade
           </h3>
           <p className="text-lg md:text-xl text-blue-100 mb-2">
-            See our <span className="font-semibold underline">29 reviews</span> on Checkatrade
+            See our <span className="font-semibold underline">verified reviews</span> on Checkatrade
           </p>
           <p className="text-xs text-blue-200 mb-4">
             Based on last 12 months
@@ -122,7 +126,7 @@ export const CheckatradeWidget = ({
       {/* Checkatrade Widget Container - This will be populated by the Checkatrade script */}
       <div
         className="checkatrade-widget mt-2"
-        data-company-id="1165583"
+        data-company-id={CHECKATRADE_CONFIG.companyId.toString()}
       />
     </motion.div>
   );

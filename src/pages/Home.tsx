@@ -16,6 +16,7 @@ import Angeli4 from "@/assets/Angeli4.jpeg";
 import { ReviewsSection } from "@/components/ReviewsSection";
 import { CheckatradeWidget } from "@/components/CheckatradeWidget";
 import { SEOHead } from "@/components/SEOHead";
+import { CHECKATRADE_CONFIG } from "@/config/checkatradeConfig";
 
 const Home = () => {
   const autoplayPlugin = useRef(
@@ -78,7 +79,7 @@ const Home = () => {
               Angeli Gardens provides expert landscaping and garden services across London, Surrey & Berkshire
             </p>
             <p className="text-lg md:text-xl mb-8 text-background/80 font-light">
-              <a href="https://www.checkatrade.com/trades/angeligardens" target="_blank" rel="noopener noreferrer" className="underline font-semibold hover:text-background">Checkatrade approved</a> with 4.9/5 rating
+              <a href={CHECKATRADE_CONFIG.profileUrl} target="_blank" rel="noopener noreferrer" className="underline font-semibold hover:text-background">Checkatrade approved</a> with {CHECKATRADE_CONFIG.rating}/{CHECKATRADE_CONFIG.maxRating} rating
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" asChild className="text-lg h-14 px-8">

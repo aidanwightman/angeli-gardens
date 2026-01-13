@@ -8,6 +8,7 @@ import { CheckatradeWidget } from "@/components/CheckatradeWidget";
 import { SEOHead } from "@/components/SEOHead";
 import { Star } from "lucide-react";
 import { replaceAnonymousName } from "@/lib/reviewNames";
+import { CHECKATRADE_CONFIG } from "@/config/checkatradeConfig";
 
 interface Review {
   id: string;
@@ -66,9 +67,9 @@ const Reviews = () => {
   return (
     <div className="min-h-screen py-20">
       <SEOHead
-        title="Client Reviews & Testimonials | Angeli Gardens | Checkatrade 4.9/5"
-        description="Read genuine client reviews for Angeli Gardens. Checkatrade approved with 4.9/5 rating and 29+ reviews. See what our satisfied customers say about our landscaping and garden services in London, Surrey & Berkshire."
-        keywords="Angeli Gardens reviews, Checkatrade reviews, landscaping reviews London, garden services reviews Surrey, Checkatrade 4.9 rating, landscaping testimonials Berkshire"
+        title={`Client Reviews & Testimonials | Angeli Gardens | Checkatrade ${CHECKATRADE_CONFIG.rating}/${CHECKATRADE_CONFIG.maxRating}`}
+        description={`Read genuine client reviews for Angeli Gardens. Checkatrade approved with ${CHECKATRADE_CONFIG.rating}/${CHECKATRADE_CONFIG.maxRating} rating. See what our satisfied customers say about our landscaping and garden services in London, Surrey & Berkshire.`}
+        keywords={`Angeli Gardens reviews, Checkatrade reviews, landscaping reviews London, garden services reviews Surrey, Checkatrade ${CHECKATRADE_CONFIG.rating} rating, landscaping testimonials Berkshire`}
         canonical="https://www.angeligardens.co.uk/reviews"
       />
       <div className="container mx-auto px-4">

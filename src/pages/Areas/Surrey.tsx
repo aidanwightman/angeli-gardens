@@ -6,8 +6,10 @@ import { CheckatradeWidget } from "@/components/CheckatradeWidget";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CHECKATRADE_CONFIG } from "@/config/checkatradeConfig";
+import { useCheckatradeData } from "@/hooks/useCheckatradeData";
 
 const Surrey = () => {
+  const { rating } = useCheckatradeData();
   const areas = [
     "Guildford", "Woking", "Epsom", "Reigate", "Dorking", "Leatherhead",
     "Esher", "Cobham", "Weybridge", "Walton-on-Thames", "Chertsey", "Staines",
@@ -40,7 +42,7 @@ const Surrey = () => {
     <div>
       <SEOHead
         title="Landscaping Services in Surrey | Angeli Gardens | Checkatrade Approved"
-        description={`Expert landscaping and garden services across Surrey. Checkatrade approved with ${CHECKATRADE_CONFIG.rating}/${CHECKATRADE_CONFIG.maxRating} rating. Garden maintenance, patios, decking, fencing, and landscaping in Guildford, Woking, Epsom, Reigate, and all Surrey areas. Free quotes.`}
+        description={`Expert landscaping and garden services across Surrey. Checkatrade approved with ${rating}/${CHECKATRADE_CONFIG.maxRating} rating. Garden maintenance, patios, decking, fencing, and landscaping in Guildford, Woking, Epsom, Reigate, and all Surrey areas. Free quotes.`}
         keywords="landscaping Surrey, garden maintenance Surrey, landscaper Surrey, patio installation Surrey, decking Surrey, fencing Surrey, garden services Surrey, Checkatrade approved landscaper Surrey, landscaping Guildford, landscaping Woking, landscaping Epsom"
         canonical="https://www.angeligardens.co.uk/areas/surrey"
       />
@@ -65,7 +67,7 @@ const Surrey = () => {
               <h1 className="text-5xl md:text-6xl font-bold">Landscaping Services in Surrey</h1>
             </div>
             <p className="text-xl text-primary-foreground/90 mb-6">
-              Expert garden maintenance, landscaping, and outdoor design services across all Surrey areas. Checkatrade approved with {CHECKATRADE_CONFIG.rating}/{CHECKATRADE_CONFIG.maxRating} rating.
+              Expert garden maintenance, landscaping, and outdoor design services across all Surrey areas. Checkatrade approved with {rating}/{CHECKATRADE_CONFIG.maxRating} rating.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" variant="secondary" asChild>

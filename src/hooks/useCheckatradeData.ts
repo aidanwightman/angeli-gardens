@@ -31,7 +31,7 @@ export function useCheckatradeData(): CheckatradeData {
                 // Fetch the most recent record from the database
                 // Using type assertion since the table is new and types haven't been regenerated yet
                 const { data: checkatradeData, error } = await supabase
-                    .from('checkatrade_data' as any)
+                    .from('checkatrade_data')
                     .select('rating, review_count, fetched_at')
                     .order('fetched_at', { ascending: false })
                     .limit(1)
@@ -56,14 +56,12 @@ export function useCheckatradeData(): CheckatradeData {
 
                 if (checkatradeData) {
                     // Use live data from database
-                    // Type assertion needed until Supabase types are regenerated
-                    const data = checkatradeData as any;
                     setData({
-                        rating: Number(data.rating),
-                        reviewCount: data.review_count,
+                        rating: Number(checkatradeData.rating),
+                        reviewCount: checkatradeData.review_count,
                         isLoading: false,
                         isLive: true,
-                        lastUpdated: new Date(data.fetched_at),
+                        lastUpdated: new Date(checkatradeData.fetched_at),
                         error: null,
                     });
                 } else {

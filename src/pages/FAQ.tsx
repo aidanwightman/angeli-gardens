@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { SEOHead } from "@/components/SEOHead";
 import { CHECKATRADE_CONFIG } from "@/config/checkatradeConfig";
+import { useCheckatradeData } from "@/hooks/useCheckatradeData";
 import {
   Accordion,
   AccordionContent,
@@ -12,6 +13,7 @@ import {
 } from "@/components/ui/accordion";
 
 const FAQ = () => {
+  const { rating } = useCheckatradeData();
   const faqs = [
     {
       question: "What areas do you serve?",
@@ -29,7 +31,7 @@ const FAQ = () => {
     },
     {
       question: "Are you Checkatrade approved?",
-      answer: `Yes! We are a Checkatrade approved business with an excellent ${CHECKATRADE_CONFIG.rating}/${CHECKATRADE_CONFIG.maxRating} rating based on verified customer reviews. You can view our full Checkatrade profile and read all our reviews at ${CHECKATRADE_CONFIG.profileUrl}`,
+      answer: `Yes! We are a Checkatrade approved business with an excellent ${rating}/${CHECKATRADE_CONFIG.maxRating} rating based on verified customer reviews. You can view our full Checkatrade profile and read all our reviews at ${CHECKATRADE_CONFIG.profileUrl}`,
     },
     {
       question: "Do you provide free quotes?",
@@ -67,7 +69,7 @@ const FAQ = () => {
     },
     {
       question: "What makes you different from other landscapers?",
-      answer: `We combine over 10 years of experience with a genuine passion for creating beautiful outdoor spaces. We're Checkatrade approved with a ${CHECKATRADE_CONFIG.rating}/${CHECKATRADE_CONFIG.maxRating} rating, fully insured, and come fully equipped. We're committed to quality craftsmanship, customer satisfaction, and sustainability. Every project is approached with attention to detail and a focus on exceeding expectations.`,
+      answer: `We combine over 10 years of experience with a genuine passion for creating beautiful outdoor spaces. We're Checkatrade approved with a ${rating}/${CHECKATRADE_CONFIG.maxRating} rating, fully insured, and come fully equipped. We're committed to quality craftsmanship, customer satisfaction, and sustainability. Every project is approached with attention to detail and a focus on exceeding expectations.`,
     },
   ];
 

@@ -6,8 +6,10 @@ import { CheckatradeWidget } from "@/components/CheckatradeWidget";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CHECKATRADE_CONFIG } from "@/config/checkatradeConfig";
+import { useCheckatradeData } from "@/hooks/useCheckatradeData";
 
 const Berkshire = () => {
+  const { rating } = useCheckatradeData();
   const areas = [
     "Reading", "Windsor", "Maidenhead", "Slough", "Bracknell", "Newbury",
     "Wokingham", "Ascot", "Eton", "Datchet", "Cookham", "Marlow",
@@ -39,7 +41,7 @@ const Berkshire = () => {
     <div>
       <SEOHead
         title="Landscaping Services in Berkshire | Angeli Gardens | Checkatrade Approved"
-        description={`Expert landscaping and garden services across Berkshire. Checkatrade approved with ${CHECKATRADE_CONFIG.rating}/${CHECKATRADE_CONFIG.maxRating} rating. Garden maintenance, patios, decking, fencing, and landscaping in Reading, Windsor, Maidenhead, Slough, and all Berkshire areas. Free quotes.`}
+        description={`Expert landscaping and garden services across Berkshire. Checkatrade approved with ${rating}/${CHECKATRADE_CONFIG.maxRating} rating. Garden maintenance, patios, decking, fencing, and landscaping in Reading, Windsor, Maidenhead, Slough, and all Berkshire areas. Free quotes.`}
         keywords="landscaping Berkshire, garden maintenance Berkshire, landscaper Berkshire, patio installation Berkshire, decking Berkshire, fencing Berkshire, garden services Berkshire, Checkatrade approved landscaper Berkshire, landscaping Reading, landscaping Windsor, landscaping Maidenhead"
         canonical="https://www.angeligardens.co.uk/areas/berkshire"
       />
@@ -64,7 +66,7 @@ const Berkshire = () => {
               <h1 className="text-5xl md:text-6xl font-bold">Landscaping Services in Berkshire</h1>
             </div>
             <p className="text-xl text-primary-foreground/90 mb-6">
-              Expert garden maintenance, landscaping, and outdoor design services across all Berkshire areas. Checkatrade approved with {CHECKATRADE_CONFIG.rating}/{CHECKATRADE_CONFIG.maxRating} rating.
+              Expert garden maintenance, landscaping, and outdoor design services across all Berkshire areas. Checkatrade approved with {rating}/{CHECKATRADE_CONFIG.maxRating} rating.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" variant="secondary" asChild>

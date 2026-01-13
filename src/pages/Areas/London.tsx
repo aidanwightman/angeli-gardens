@@ -6,8 +6,10 @@ import { CheckatradeWidget } from "@/components/CheckatradeWidget";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CHECKATRADE_CONFIG } from "@/config/checkatradeConfig";
+import { useCheckatradeData } from "@/hooks/useCheckatradeData";
 
 const London = () => {
+  const { rating } = useCheckatradeData();
   const areas = [
     "Kensington", "Chelsea", "Richmond", "Wimbledon", "Putney", "Fulham",
     "Hammersmith", "Chiswick", "Ealing", "Islington", "Camden", "Hampstead",
@@ -41,7 +43,7 @@ const London = () => {
     <div>
       <SEOHead
         title="Landscaping Services in London | Angeli Gardens | Checkatrade Approved"
-        description={`Expert landscaping and garden services across London. Checkatrade approved with ${CHECKATRADE_CONFIG.rating}/${CHECKATRADE_CONFIG.maxRating} rating. Garden maintenance, patios, decking, fencing, and landscaping in Kensington, Richmond, Wimbledon, and all London areas. Free quotes.`}
+        description={`Expert landscaping and garden services across London. Checkatrade approved with ${rating}/${CHECKATRADE_CONFIG.maxRating} rating. Garden maintenance, patios, decking, fencing, and landscaping in Kensington, Richmond, Wimbledon, and all London areas. Free quotes.`}
         keywords="landscaping London, garden maintenance London, landscaper London, patio installation London, decking London, fencing London, garden services London, Checkatrade approved landscaper London, landscaping Kensington, landscaping Richmond, landscaping Wimbledon"
         canonical="https://www.angeligardens.co.uk/areas/london"
       />
@@ -66,7 +68,7 @@ const London = () => {
               <h1 className="text-5xl md:text-6xl font-bold">Landscaping Services in London</h1>
             </div>
             <p className="text-xl text-primary-foreground/90 mb-6">
-              Expert garden maintenance, landscaping, and outdoor design services across all London areas. Checkatrade approved with {CHECKATRADE_CONFIG.rating}/{CHECKATRADE_CONFIG.maxRating} rating.
+              Expert garden maintenance, landscaping, and outdoor design services across all London areas. Checkatrade approved with {rating}/{CHECKATRADE_CONFIG.maxRating} rating.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" variant="secondary" asChild>

@@ -54,7 +54,7 @@ export const CheckatradeWidget = ({
             </div>
           </div>
         </div>
-        <p className="text-sm text-blue-100 mb-2">Based on verified reviews</p>
+        <p className="text-sm text-blue-100 mb-2">Based on {reviewCount} verified reviews</p>
         {showLink && (
           <a
             href={checkatradeUrl}
@@ -97,7 +97,7 @@ export const CheckatradeWidget = ({
             Rated Excellent on Checkatrade
           </h3>
           <p className="text-lg md:text-xl text-blue-100 mb-2">
-            See our <span className="font-semibold underline">verified reviews</span> on Checkatrade
+            See our <span className="font-semibold underline">{reviewCount} verified reviews</span> on Checkatrade
           </p>
           <p className="text-xs text-blue-200 mb-4">
             Based on last 12 months

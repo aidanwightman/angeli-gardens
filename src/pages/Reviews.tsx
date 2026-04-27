@@ -8,6 +8,8 @@ import { CheckatradeWidget } from "@/components/CheckatradeWidget";
 import { SEOHead } from "@/components/SEOHead";
 import { Star } from "lucide-react";
 import { replaceAnonymousName } from "@/lib/reviewNames";
+import { CHECKATRADE_CONFIG } from "@/config/checkatradeConfig";
+import { useCheckatradeData } from "@/hooks/useCheckatradeData";
 
 interface Review {
   id: string;
@@ -20,6 +22,7 @@ interface Review {
 }
 
 const Reviews = () => {
+  const { rating } = useCheckatradeData();
   const [reviews, setReviews] = useState<Review[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -59,16 +62,16 @@ const Reviews = () => {
     if (diffDays === 1) return "Yesterday";
     if (diffDays < 7) return `${diffDays} days ago`;
     if (diffDays < 30) return `${Math.floor(diffDays / 7)} weeks ago`;
-    
+
     return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
   };
 
   return (
     <div className="min-h-screen py-20">
       <SEOHead
-        title="Client Reviews & Testimonials | Angeli Gardens | Checkatrade 9.75/10"
-        description="Read genuine client reviews for Angeli Gardens. Checkatrade approved with 9.75/10 rating and 456+ reviews. See what our satisfied customers say about our landscaping and garden services in London, Surrey & Berkshire."
-        keywords="Angeli Gardens reviews, Checkatrade reviews, landscaping reviews London, garden services reviews Surrey, Checkatrade 9.75 rating, landscaping testimonials Berkshire"
+        title={`Client Reviews & Testimonials | Angeli Gardens | Checkatrade ${rating}/${CHECKATRADE_CONFIG.maxRating}`}
+        description={`Read genuine client reviews for Angeli Gardens. Checkatrade approved with ${rating}/${CHECKATRADE_CONFIG.maxRating} rating. See what our satisfied customers say about our landscaping and garden services in London, Surrey & Berkshire.`}
+        keywords={`Angeli Gardens reviews, Checkatrade reviews, landscaping reviews London, garden services reviews Surrey, Checkatrade ${rating} rating, landscaping testimonials Berkshire`}
         canonical="https://www.angeligardens.co.uk/reviews"
       />
       <div className="container mx-auto px-4">

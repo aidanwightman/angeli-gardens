@@ -3,6 +3,8 @@ import ServiceCard from "@/components/ServiceCard";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { SEOHead } from "@/components/SEOHead";
+import { CHECKATRADE_CONFIG } from "@/config/checkatradeConfig";
+import { useCheckatradeData } from "@/hooks/useCheckatradeData";
 import {
   Leaf,
   Scissors,
@@ -21,6 +23,7 @@ import {
 } from "lucide-react";
 
 const Services = () => {
+  const { rating } = useCheckatradeData();
   const gardeningServices = [
     {
       icon: Leaf,
@@ -115,76 +118,76 @@ const Services = () => {
     <div>
       <SEOHead
         title="Landscaping & Garden Services in London, Surrey & Berkshire | Angeli Gardens"
-        description="Professional landscaping and garden services across London, Surrey & Berkshire. Checkatrade approved with 9.75/10 rating. Garden maintenance, patios, decking, fencing, turfing, and more. Free quotes."
+        description={`Professional landscaping and garden services across London, Surrey & Berkshire. Checkatrade approved with ${rating}/${CHECKATRADE_CONFIG.maxRating} rating. Garden maintenance, patios, decking, fencing, turfing, and more. Free quotes.`}
         keywords="landscaping London, garden maintenance Surrey, landscaping Berkshire, patios London, decking Surrey, fencing Berkshire, turfing London, hedge trimming Surrey, tree pruning Berkshire, garden clearance London, Checkatrade approved landscaper"
         canonical="https://www.angeligardens.co.uk/services"
       />
       {/* Hero Section */}
       <section className="relative py-20 bg-primary text-primary-foreground overflow-hidden">
-          {/* Floating gardening animations */}
-          <motion.div
-            className="absolute top-10 left-[10%] text-primary-foreground/20"
-            animate={{
-              y: [0, -20, 0],
-              rotate: [0, 10, 0],
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          >
-            <Scissors size={40} />
-          </motion.div>
-          
-          <motion.div
-            className="absolute top-20 right-[15%] text-primary-foreground/20"
-            animate={{
-              y: [0, 20, 0],
-              rotate: [0, -15, 0],
-            }}
-            transition={{
-              duration: 5,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          >
-            <TreePine size={48} />
-          </motion.div>
+        {/* Floating gardening animations */}
+        <motion.div
+          className="absolute top-10 left-[10%] text-primary-foreground/20"
+          animate={{
+            y: [0, -20, 0],
+            rotate: [0, 10, 0],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
+          <Scissors size={40} />
+        </motion.div>
 
-          <motion.div
-            className="absolute bottom-10 left-[20%] text-primary-foreground/20"
-            animate={{
-              y: [0, -15, 0],
-              x: [0, 10, 0],
-            }}
-            transition={{
-              duration: 3.5,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          >
-            <Flower2 size={36} />
-          </motion.div>
+        <motion.div
+          className="absolute top-20 right-[15%] text-primary-foreground/20"
+          animate={{
+            y: [0, 20, 0],
+            rotate: [0, -15, 0],
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
+          <TreePine size={48} />
+        </motion.div>
 
-          <motion.div
-            className="absolute bottom-20 right-[25%] text-primary-foreground/20"
-            animate={{
-              y: [0, 15, 0],
-              rotate: [0, 20, 0],
-            }}
-            transition={{
-              duration: 4.5,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          >
-            <Leaf size={44} />
-          </motion.div>
+        <motion.div
+          className="absolute bottom-10 left-[20%] text-primary-foreground/20"
+          animate={{
+            y: [0, -15, 0],
+            x: [0, 10, 0],
+          }}
+          transition={{
+            duration: 3.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
+          <Flower2 size={36} />
+        </motion.div>
 
-          <div className="container mx-auto px-4 relative z-10">
-          <Link 
-            to="/" 
+        <motion.div
+          className="absolute bottom-20 right-[25%] text-primary-foreground/20"
+          animate={{
+            y: [0, 15, 0],
+            rotate: [0, 20, 0],
+          }}
+          transition={{
+            duration: 4.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
+          <Leaf size={44} />
+        </motion.div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <Link
+            to="/"
             className="inline-flex items-center gap-2 text-primary-foreground hover:text-primary-foreground/80 transition-colors mb-6"
           >
             <ArrowLeft size={20} />
@@ -200,7 +203,7 @@ const Services = () => {
               Comprehensive garden and landscaping solutions for private, communal and commercial properties across London, Surrey & Berkshire
             </p>
             <p className="text-lg text-primary-foreground/80">
-              <a href="https://www.checkatrade.com/trades/angeligardens" target="_blank" rel="noopener noreferrer" className="underline font-semibold">Checkatrade approved</a> with 9.75/10 rating - Trusted by 456+ customers
+              <a href={CHECKATRADE_CONFIG.profileUrl} target="_blank" rel="noopener noreferrer" className="underline font-semibold">Checkatrade approved</a> with {rating}/{CHECKATRADE_CONFIG.maxRating} rating - Trusted by satisfied customers
             </p>
           </motion.div>
         </div>
@@ -346,7 +349,7 @@ const Services = () => {
         >
           <Flower2 size={40} />
         </motion.div>
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

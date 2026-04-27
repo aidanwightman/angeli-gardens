@@ -4,6 +4,8 @@ import CallButton from "@/components/CallButton";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { SEOHead } from "@/components/SEOHead";
+import { CHECKATRADE_CONFIG } from "@/config/checkatradeConfig";
+import { useCheckatradeData } from "@/hooks/useCheckatradeData";
 import {
   Accordion,
   AccordionContent,
@@ -12,6 +14,7 @@ import {
 } from "@/components/ui/accordion";
 
 const FAQ = () => {
+  const { rating } = useCheckatradeData();
   const faqs = [
     {
       question: "What areas do you serve?",
@@ -29,7 +32,7 @@ const FAQ = () => {
     },
     {
       question: "Are you Checkatrade approved?",
-      answer: "Yes! We are a Checkatrade approved business with an excellent 9.75/10 rating based on 456+ verified customer reviews. You can view our full Checkatrade profile and read all our reviews at https://www.checkatrade.com/trades/angeligardens",
+      answer: `Yes! We are a Checkatrade approved business with an excellent ${rating}/${CHECKATRADE_CONFIG.maxRating} rating based on verified customer reviews. You can view our full Checkatrade profile and read all our reviews at ${CHECKATRADE_CONFIG.profileUrl}`,
     },
     {
       question: "Do you provide free quotes?",
@@ -67,7 +70,7 @@ const FAQ = () => {
     },
     {
       question: "What makes you different from other landscapers?",
-      answer: "We combine over 10 years of experience with a genuine passion for creating beautiful outdoor spaces. We're Checkatrade approved with a 9.75/10 rating, fully insured, and come fully equipped. We're committed to quality craftsmanship, customer satisfaction, and sustainability. Every project is approached with attention to detail and a focus on exceeding expectations.",
+      answer: `We combine over 10 years of experience with a genuine passion for creating beautiful outdoor spaces. We're Checkatrade approved with a ${rating}/${CHECKATRADE_CONFIG.maxRating} rating, fully insured, and come fully equipped. We're committed to quality craftsmanship, customer satisfaction, and sustainability. Every project is approached with attention to detail and a focus on exceeding expectations.`,
     },
   ];
 
@@ -107,12 +110,12 @@ const FAQ = () => {
         keywords="landscaping FAQ, garden services questions, landscaping London FAQ, garden maintenance Surrey questions, Checkatrade approved landscaper FAQ, landscaping Berkshire FAQ"
         canonical="https://www.angeligardens.co.uk/faq"
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 bg-primary text-primary-foreground overflow-hidden">
         <div className="container mx-auto px-4">
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="inline-flex items-center gap-2 text-primary-foreground hover:text-primary-foreground/80 transition-colors mb-6"
           >
             <ArrowLeft size={20} />

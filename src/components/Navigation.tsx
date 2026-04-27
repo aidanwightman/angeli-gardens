@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import ClickSpark from "@/components/ClickSpark";
 import logo from "@/assets/logo.jpg";
+import CallButton from "@/components/CallButton";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,10 +39,10 @@ const Navigation = () => {
       <div className="bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center md:justify-end h-10 text-sm gap-6">
-            <a href="tel:07542973733" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <CallButton className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <Phone className="h-4 w-4" />
               <span className="hidden sm:inline">07542 973733</span>
-            </a>
+            </CallButton>
             <a href="mailto:Angeligardens1@gmail.com" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <Mail className="h-4 w-4" />
               <span className="hidden sm:inline">Angeligardens1@gmail.com</span>
@@ -109,12 +110,10 @@ const Navigation = () => {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <motion.div whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }}>
-              <Button variant="outline" size="sm" asChild>
-                <a href="tel:07542973733" className="flex items-center gap-2">
-                  <Phone className="h-4 w-4" />
-                  Call Now
-                </a>
-              </Button>
+              <CallButton variant="outline" size="sm" className="flex items-center gap-2">
+                <Phone className="h-4 w-4" />
+                Call Now
+              </CallButton>
             </motion.div>
             <motion.div whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }}>
               <Button size="sm" asChild>
@@ -162,12 +161,10 @@ const Navigation = () => {
               ))}
               <div className="pt-4 space-y-3">
                 <motion.div whileTap={{ scale: 0.98 }}>
-                  <Button variant="outline" className="w-full" asChild>
-                    <a href="tel:07542973733" className="flex items-center justify-center gap-2">
-                      <Phone className="h-4 w-4" />
-                      Call Now
-                    </a>
-                  </Button>
+                  <CallButton variant="outline" className="w-full flex items-center justify-center gap-2">
+                    <Phone className="h-4 w-4" />
+                    Call Now
+                  </CallButton>
                 </motion.div>
                 <motion.div whileTap={{ scale: 0.98 }}>
                   <Button className="w-full" asChild>

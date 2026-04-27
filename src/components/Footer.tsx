@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
 import { CheckatradeWidget } from "@/components/CheckatradeWidget";
 import logo from "@/assets/logo.jpg";
+import CallButton from "@/components/CallButton";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -101,9 +102,9 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-sm text-background/80">
                 <Phone size={18} className="mt-1 flex-shrink-0" />
-                <a href="tel:07542973733" className="hover:text-primary transition-colors">
+                <CallButton className="hover:text-primary transition-colors">
                   07542 973733
-                </a>
+                </CallButton>
               </li>
               <li className="flex items-start gap-3 text-sm text-background/80">
                 <Mail size={18} className="mt-1 flex-shrink-0" />

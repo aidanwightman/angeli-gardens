@@ -2,8 +2,9 @@ import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Phone, MapPin } from "lucide-react";
+import { Phone, MapPin, Star, ExternalLink } from "lucide-react";
 import CallButton from "@/components/CallButton";
+import { LogoLoop } from "@/components/LogoLoop";
 import {
   Carousel,
   CarouselContent,
@@ -14,10 +15,58 @@ import Angeli from "@/assets/Angeli.jpeg";
 import Angeli2 from "@/assets/Angeli2.jpeg";
 import Angeli3 from "@/assets/Angeli3.jpeg";
 import Angeli4 from "@/assets/Angeli4.jpeg";
-import { CheckatradeWidget } from "@/components/CheckatradeWidget";
 import { SEOHead } from "@/components/SEOHead";
 import { CHECKATRADE_CONFIG } from "@/config/checkatradeConfig";
 import { useCheckatradeData } from "@/hooks/useCheckatradeData";
+
+// Scrolling Checkatrade marquee strip
+const CheckatradeMarquee = () => {
+  const { rating, reviewCount } = useCheckatradeData();
+
+  const card = (
+    <a
+      href={CHECKATRADE_CONFIG.profileUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-4 bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-xl px-6 py-4 shadow-lg hover:scale-[1.02] transition-transform select-none"
+      style={{ minWidth: 340 }}
+    >
+      {/* Score badge */}
+      <div className="bg-white rounded-lg px-4 py-3 text-center flex-shrink-0 shadow">
+        <div className="text-3xl font-bold text-gray-900 leading-none">{rating}</div>
+        <div className="text-sm text-gray-500 font-semibold">/5</div>
+        <div className="flex gap-0.5 mt-1 justify-center">
+          {[...Array(5)].map((_, i) => (
+            <Star key={i} className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" />
+          ))}
+        </div>
+      </div>
+      {/* Text */}
+      <div>
+        <p className="font-bold text-lg leading-tight">Rated Excellent</p>
+        <p className="text-blue-100 text-sm">{reviewCount} verified reviews</p>
+        <p className="text-blue-200 text-xs mt-0.5">on Checkatrade</p>
+      </div>
+      <ExternalLink className="h-4 w-4 text-blue-200 ml-auto flex-shrink-0" />
+    </a>
+  );
+
+  // Repeat the card as LogoLoop node items
+  const items = Array.from({ length: 4 }, (_, i) => ({ node: card, ariaLabel: `Checkatrade rating ${i + 1}` }));
+
+  return (
+    <LogoLoop
+      logos={items}
+      speed={60}
+      gap={24}
+      pauseOnHover
+      fadeOut
+      fadeOutColor="white"
+      logoHeight={90}
+      ariaLabel="Checkatrade rating strip"
+    />
+  );
+};
 
 const Home = () => {
   const { rating } = useCheckatradeData();
@@ -130,19 +179,9 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Checkatrade Section */}
-      <section className="py-4 bg-background">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, x: -80 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="max-w-4xl mx-auto"
-          >
-            <CheckatradeWidget />
-          </motion.div>
-        </div>
+      {/* Checkatrade Marquee Section */}
+      <section className="py-4 bg-background overflow-hidden">
+        <CheckatradeMarquee />
       </section>
 
       {/* CTA Section */}

@@ -131,12 +131,13 @@ const Home = () => {
       </section>
 
       {/* Checkatrade Section */}
-      <section className="py-10 bg-background">
+      <section className="py-4 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, x: -80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
             className="max-w-4xl mx-auto"
           >
             <CheckatradeWidget />

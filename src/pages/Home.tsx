@@ -25,7 +25,6 @@ import lawnProject3 from "@/assets/lawn-project-3.jpg";
 import lawnProject4 from "@/assets/lawn-project-4.jpg";
 import lawnProject5 from "@/assets/lawn-project-5.jpg";
 import lawnProject6 from "@/assets/lawn-project-6.jpg";
-import { ReviewsSection } from "@/components/ReviewsSection";
 import { CheckatradeWidget } from "@/components/CheckatradeWidget";
 import { SEOHead } from "@/components/SEOHead";
 
@@ -160,44 +159,6 @@ const Home = () => {
             className="max-w-4xl mx-auto"
           >
             <CheckatradeWidget />
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Reviews Section */}
-      <section className="py-20 bg-muted/50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Angeli Gardens Client Reviews</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              See what our satisfied customers have to say about Angeli Gardens and our work
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            <ReviewsSection />
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
-            className="text-center mt-8"
-          >
-            <Button size="lg" asChild>
-              <Link to="/reviews">View All Reviews</Link>
-            </Button>
           </motion.div>
         </div>
       </section>

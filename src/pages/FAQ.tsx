@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, HelpCircle } from "lucide-react";
+import CallButton from "@/components/CallButton";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { SEOHead } from "@/components/SEOHead";
@@ -180,12 +181,9 @@ const FAQ = () => {
               >
                 Contact Us
               </Link>
-              <a
-                href="tel:07542973733"
-                className="inline-flex items-center justify-center h-12 px-6 border-2 border-primary rounded-md font-medium hover:bg-primary/10 transition-colors"
-              >
+              <CallButton className="inline-flex items-center justify-center h-12 px-6 border-2 border-primary rounded-md font-medium hover:bg-primary/10 transition-colors">
                 Call: 07542 973733
-              </a>
+              </CallButton>
             </div>
           </motion.div>
         </div>

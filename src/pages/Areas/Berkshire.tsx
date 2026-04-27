@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, MapPin, Phone, CheckCircle2 } from "lucide-react";
+import CallButton from "@/components/CallButton";
 import { Link } from "react-router-dom";
 import { SEOHead } from "@/components/SEOHead";
 import { CheckatradeWidget } from "@/components/CheckatradeWidget";
@@ -69,12 +70,10 @@ const Berkshire = () => {
               <Button size="lg" variant="secondary" asChild>
                 <Link to="/contact">Get Free Quote</Link>
               </Button>
-              <Button size="lg" variant="secondary" asChild>
-                <a href="tel:07542973733" className="flex items-center gap-2">
-                  <Phone size={20} />
-                  Call Now
-                </a>
-              </Button>
+              <CallButton size="lg" variant="secondary" className="flex items-center gap-2">
+                <Phone size={20} />
+                Call Now
+              </CallButton>
             </div>
           </motion.div>
         </div>
@@ -177,12 +176,10 @@ const Berkshire = () => {
               <Button size="lg" variant="secondary" asChild>
                 <Link to="/contact">Get Your Free Quote</Link>
               </Button>
-              <Button size="lg" variant="secondary" asChild>
-                <a href="tel:07542973733" className="flex items-center gap-2">
-                  <Phone size={20} />
-                  07542 973733
-                </a>
-              </Button>
+              <CallButton size="lg" variant="secondary" className="flex items-center gap-2">
+                <Phone size={20} />
+                07542 973733
+              </CallButton>
             </div>
           </motion.div>
         </div>

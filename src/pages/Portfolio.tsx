@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ArrowLeft, Leaf, Flower2, Sprout } from "lucide-react";
+import CallButton from "@/components/CallButton";
 import { Link } from "react-router-dom";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { SEOHead } from "@/components/SEOHead";
@@ -459,12 +460,9 @@ const Portfolio = () => {
                   >
                     Get Your Free Quote
                   </Link>
-                  <a
-                    href="tel:07542973733"
-                    className="inline-flex items-center justify-center h-11 px-6 border border-input rounded-md font-medium hover:bg-accent transition-colors"
-                  >
+                  <CallButton className="inline-flex items-center justify-center h-11 px-6 border border-input rounded-md font-medium hover:bg-accent transition-colors">
                     Call Us Today
-                  </a>
+                  </CallButton>
                 </div>
               </div>
             </div>
@@ -522,12 +520,9 @@ const Portfolio = () => {
               >
                 Get a Free Quote
               </Link>
-              <a
-                href="tel:07542973733"
-                className="inline-flex items-center justify-center h-14 px-8 border-2 border-primary-foreground/30 rounded-md font-medium hover:bg-primary-foreground/10 transition-colors"
-              >
+              <CallButton className="inline-flex items-center justify-center h-14 px-8 border-2 border-primary-foreground/30 rounded-md font-medium hover:bg-primary-foreground/10 transition-colors">
                 Call: 07542 973733
-              </a>
+              </CallButton>
             </div>
           </motion.div>
         </div>

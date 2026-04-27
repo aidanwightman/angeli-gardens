@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Phone, MapPin } from "lucide-react";
+import CallButton from "@/components/CallButton";
 import {
   Carousel,
   CarouselContent,
@@ -106,12 +107,10 @@ const Home = () => {
               <Button size="lg" asChild className="text-lg h-14 px-8">
                 <Link to="/contact">Get a Free Quote</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="text-lg h-14 px-8 bg-background/10 backdrop-blur-sm border-background/30 text-background hover:bg-background/20">
-                <a href="tel:07542973733" className="flex items-center gap-2">
-                  <Phone size={20} />
-                  Call Now
-                </a>
-              </Button>
+              <CallButton size="lg" variant="outline" className="text-lg h-14 px-8 bg-background/10 backdrop-blur-sm border-background/30 text-background hover:bg-background/20 flex items-center gap-2">
+                <Phone size={20} />
+                Call Now
+              </CallButton>
             </div>
             <div className="mt-8 flex flex-col sm:flex-row items-center gap-4 text-sm text-background/80">
               <div className="flex items-center gap-2">
@@ -252,17 +251,10 @@ const Home = () => {
               <Button size="lg" variant="secondary" asChild className="text-lg h-14 px-8">
                 <Link to="/contact">Get Your Free Quote</Link>
               </Button>
-              <Button
-                size="lg"
-                variant="secondary"
-                asChild
-                className="text-lg h-14 px-8"
-              >
-                <a href="tel:07542973733" className="flex items-center gap-2">
-                  <Phone size={20} />
-                  07542 973733
-                </a>
-              </Button>
+              <CallButton size="lg" variant="secondary" className="text-lg h-14 px-8 flex items-center gap-2">
+                <Phone size={20} />
+                07542 973733
+              </CallButton>
             </div>
           </motion.div>
         </div>

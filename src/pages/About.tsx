@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Award, Users, Target, Heart, ArrowLeft } from "lucide-react";
+import CallButton from "@/components/CallButton";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { SEOHead } from "@/components/SEOHead";
@@ -201,12 +202,9 @@ const About = () => {
               >
                 Get a Free Quote
               </a>
-              <a
-                href="tel:07542973733"
-                className="inline-flex items-center justify-center h-14 px-8 border-2 border-primary-foreground/30 rounded-md font-medium hover:bg-primary-foreground/10 transition-colors"
-              >
+              <CallButton className="inline-flex items-center justify-center h-14 px-8 border-2 border-primary-foreground/30 rounded-md font-medium hover:bg-primary-foreground/10 transition-colors">
                 Call: 07542 973733
-              </a>
+              </CallButton>
             </div>
           </motion.div>
         </div>

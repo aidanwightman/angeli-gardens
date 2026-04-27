@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 import Layout from "./components/Layout";
 import ClickSpark from "./components/ClickSpark";
+import FloatingCallButton from "./components/FloatingCallButton";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -43,6 +44,7 @@ const App = () => (
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
+              <FloatingCallButton />
             </Layout>
           </ClickSpark>
         </BrowserRouter>

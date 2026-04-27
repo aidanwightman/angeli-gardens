@@ -8,6 +8,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { shouldShowCallback } from "@/lib/businessHours";
 import CallbackRequestModal from "./CallbackRequestModal";
 
 type Props = {
@@ -26,6 +27,16 @@ export default function CallButton({ children, className, variant, size }: Props
       ? cn(buttonVariants({ variant, size }), className)
       : className;
 
+  // In business hours → dial straight through, no dropdown
+  if (!shouldShowCallback()) {
+    return (
+      <a href="tel:07542973733" className={classes}>
+        {children}
+      </a>
+    );
+  }
+
+  // Out of hours → dropdown: call anyway or schedule callback
   return (
     <>
       <Popover open={popoverOpen} onOpenChange={setPopoverOpen}>

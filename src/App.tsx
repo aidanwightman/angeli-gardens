@@ -17,6 +17,7 @@ import FAQ from "./pages/FAQ";
 import London from "./pages/Areas/London";
 import Surrey from "./pages/Areas/Surrey";
 import Berkshire from "./pages/Areas/Berkshire";
+import Maidenhead from "./pages/Areas/Maidenhead";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -41,6 +42,7 @@ const App = () => (
                 <Route path="/areas/london" element={<London />} />
                 <Route path="/areas/surrey" element={<Surrey />} />
                 <Route path="/areas/berkshire" element={<Berkshire />} />
+                <Route path="/areas/maidenhead" element={<Maidenhead />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>

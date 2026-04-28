@@ -144,7 +144,7 @@ const Home = () => {
             <div className="mt-8 flex flex-col sm:flex-row items-center gap-4 text-sm text-background/80">
               <div className="flex items-center gap-2">
                 <MapPin size={18} />
-                <span>Angeli Gardens serving</span>
+                <span>Based in <Link to="/areas/maidenhead" className="underline font-semibold hover:text-background">Maidenhead SL6</Link> · serving</span>
               </div>
               <div className="flex items-center gap-2">
                 <Link to="/areas/london" className="underline hover:text-background">London</Link>

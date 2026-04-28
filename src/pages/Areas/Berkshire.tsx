@@ -42,8 +42,8 @@ const Berkshire = () => {
     <div>
       <SEOHead
         title="Landscaping Services in Berkshire | Angeli Gardens | Checkatrade Approved"
-        description={`Expert landscaping and garden services across Berkshire. Checkatrade approved with ${rating}/${CHECKATRADE_CONFIG.maxRating} rating. Garden maintenance, patios, decking, fencing, and landscaping in Reading, Windsor, Maidenhead, Slough, and all Berkshire areas. Free quotes.`}
-        keywords="landscaping Berkshire, garden maintenance Berkshire, landscaper Berkshire, patio installation Berkshire, decking Berkshire, fencing Berkshire, garden services Berkshire, Checkatrade approved landscaper Berkshire, landscaping Reading, landscaping Windsor, landscaping Maidenhead"
+        description={`Angeli Gardens — landscaping and garden services across Berkshire. Based in Maidenhead (SL6), serving SL1–SL9 postcodes. Checkatrade approved ${rating}/${CHECKATRADE_CONFIG.maxRating} rating. Patios, decking, fencing, lawn care, garden maintenance. Free quotes.`}
+        keywords="landscaping Berkshire, garden maintenance Berkshire, landscaper Berkshire, landscaping SL1 SL2 SL3 SL4 SL5 SL6 SL7 SL8 SL9, gardener Maidenhead, gardener Slough, landscaper Windsor, patio installation Berkshire, decking Berkshire, fencing Berkshire, Checkatrade approved landscaper Berkshire, landscaping Reading, landscaping Windsor, landscaping Maidenhead"
         canonical="https://www.angeligardens.co.uk/areas/berkshire"
       />
 
@@ -86,6 +86,66 @@ const Berkshire = () => {
       <section className="py-12 bg-background">
         <div className="container mx-auto px-4 max-w-4xl">
           <CheckatradeWidget variant="compact" />
+        </div>
+      </section>
+
+      {/* SL Postcode Section */}
+      <section className="py-16 bg-primary/5 border-y border-primary/10">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-10"
+          >
+            <h2 className="text-3xl font-bold mb-3">Landscaping Across SL Postcodes</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Based in <strong>Maidenhead (SL6)</strong>, we cover all SL postcode districts —
+              from Slough and Windsor to Marlow and Gerrards Cross.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto mb-8">
+            {[
+              { code: "SL1", area: "Slough" },
+              { code: "SL2", area: "Slough, Farnham Common, Stoke Poges" },
+              { code: "SL3", area: "Slough, Langley, Colnbrook" },
+              { code: "SL4", area: "Windsor, Eton, Old Windsor" },
+              { code: "SL5", area: "Ascot, Sunningdale, Sunninghill" },
+              { code: "SL6", area: "Maidenhead, Taplow, Cookham, Bray" },
+              { code: "SL7", area: "Marlow, Little Marlow" },
+              { code: "SL8", area: "Bourne End, Wooburn Green" },
+              { code: "SL9", area: "Gerrards Cross, Chalfont St Peter" },
+            ].map((item, index) => (
+              <motion.div
+                key={item.code}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.07 }}
+              >
+                <Card className="border-l-4 border-l-primary hover:shadow-md transition-shadow">
+                  <CardContent className="pt-4 pb-4">
+                    <div className="flex items-start gap-3">
+                      <span className="bg-primary text-primary-foreground text-xs font-bold px-2 py-1 rounded flex-shrink-0">
+                        {item.code}
+                      </span>
+                      <p className="text-sm font-medium">{item.area}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link
+              to="/areas/maidenhead"
+              className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
+            >
+              View our dedicated Maidenhead landscaping page →
+            </Link>
+          </div>
         </div>
       </section>
 

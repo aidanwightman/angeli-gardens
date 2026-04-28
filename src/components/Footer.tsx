@@ -74,8 +74,13 @@ const Footer = () => {
             <h3 className="font-heading text-lg font-semibold mb-4">Areas We Serve</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/areas/london" className="text-background/80 hover:text-primary transition-colors">
-                  London
+                <Link to="/areas/maidenhead" className="text-background/80 hover:text-primary transition-colors font-semibold">
+                  Maidenhead (SL6) — Home Base
+                </Link>
+              </li>
+              <li>
+                <Link to="/areas/berkshire" className="text-background/80 hover:text-primary transition-colors">
+                  Berkshire (SL1–SL9)
                 </Link>
               </li>
               <li>
@@ -84,8 +89,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/areas/berkshire" className="text-background/80 hover:text-primary transition-colors">
-                  Berkshire
+                <Link to="/areas/london" className="text-background/80 hover:text-primary transition-colors">
+                  London
                 </Link>
               </li>
               <li className="pt-2">
@@ -114,7 +119,10 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-3 text-sm text-background/80">
                 <MapPin size={18} className="mt-1 flex-shrink-0" />
-                <span>Serving London, Surrey & Berkshire</span>
+                <span>
+                  Maidenhead, Berkshire, SL6<br />
+                  <span className="text-background/60 text-xs">Serving SL1–SL9 · London · Surrey</span>
+                </span>
               </li>
             </ul>
           </div>

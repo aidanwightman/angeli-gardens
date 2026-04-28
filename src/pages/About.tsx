@@ -50,11 +50,11 @@ const About = () => {
         breadcrumbs={[{ name: "About", url: "https://www.angeligardens.co.uk/about" }]}
       />
       {/* Hero Section */}
-      <section className="relative py-20 bg-primary text-primary-foreground">
+      <section className="relative py-12 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-primary-foreground hover:text-primary-foreground/80 transition-colors mb-6"
+            className="inline-flex items-center gap-2 text-primary-foreground hover:text-primary-foreground/80 transition-colors mb-4"
           >
             <ArrowLeft size={20} />
             <span>Back to Home</span>
@@ -64,36 +64,33 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">About Angeli Gardens - Expert Landscapers</h1>
-            <p className="text-xl text-primary-foreground/90">
+            <h1 className="text-4xl md:text-5xl font-bold mb-3">About Angeli Gardens - Expert Landscapers</h1>
+            <p className="text-lg text-primary-foreground/90">
               Transforming outdoor spaces across London, Surrey & Berkshire for over a decade
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Story Section */}
-      <section className="py-20 bg-background">
+      {/* Story + Stats combined */}
+      <section className="py-12 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-12">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold mb-6">Our Story</h2>
-              <div className="space-y-4 text-lg text-muted-foreground">
+              <h2 className="text-3xl font-bold mb-4">Our Story</h2>
+              <div className="space-y-3 text-base text-muted-foreground">
                 <p>
                   Founded by Marley, Angeli Gardens began with a simple passion: creating beautiful, functional outdoor spaces that bring joy to homeowners.
                 </p>
                 <p>
-                  What started as a one-person operation has grown into a trusted team of skilled professionals, but our core values remain unchanged. We believe every garden tells a story, and we're here to help you write yours.
+                  What started as a one-person operation has grown into a trusted team of skilled professionals. We believe every garden tells a story, and we're here to help you write yours.
                 </p>
                 <p>
-                  From regular maintenance to complete landscape transformations, we approach every project with the same dedication to quality, sustainability, and customer satisfaction. We come fully equipped with all professional tools, so you never have to worry about additional equipment costs.
-                </p>
-                <p>
-                  Today, we proudly serve clients across <Link to="/areas/london" className="text-primary hover:underline">London</Link>, <Link to="/areas/surrey" className="text-primary hover:underline">Surrey</Link>, and <Link to="/areas/berkshire" className="text-primary hover:underline">Berkshire</Link>, bringing expertise, reliability, and creative vision to gardens of all sizes. View our <Link to="/services" className="text-primary hover:underline">services</Link> or check out our <Link to="/portfolio" className="text-primary hover:underline">portfolio</Link> to see our work.
+                  From regular maintenance to complete landscape transformations, we come fully equipped with all professional tools — no hidden equipment costs. Today, we proudly serve clients across <Link to="/areas/london" className="text-primary hover:underline">London</Link>, <Link to="/areas/surrey" className="text-primary hover:underline">Surrey</Link>, and <Link to="/areas/berkshire" className="text-primary hover:underline">Berkshire</Link>. View our <Link to="/services" className="text-primary hover:underline">services</Link> or <Link to="/portfolio" className="text-primary hover:underline">portfolio</Link>.
                 </p>
               </div>
             </motion.div>
@@ -106,30 +103,14 @@ const About = () => {
             >
               <img
                 src={project3}
-                alt="Our work"
+                alt="Angeli Gardens landscaping project"
                 className="rounded-lg shadow-2xl"
               />
             </motion.div>
           </div>
-        </div>
-      </section>
 
-      {/* Stats Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl font-bold mb-4">Angeli Gardens by the Numbers</h2>
-            <p className="text-xl text-muted-foreground">
-              Our track record speaks for itself
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+          {/* Stats inline */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto border-t pt-10">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -139,7 +120,7 @@ const About = () => {
                 transition={{ delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-5xl font-bold text-primary mb-2">{stat.value}</div>
+                <div className="text-4xl font-bold text-primary mb-1">{stat.value}</div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
               </motion.div>
             ))}
@@ -148,21 +129,21 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-background">
+      <section className="py-12 bg-muted/30">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-8"
           >
-            <h2 className="text-4xl font-bold mb-4">Angeli Gardens Values</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold mb-2">Angeli Gardens Values</h2>
+            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
               What drives us to deliver excellence in every project
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {values.map((value, index) => (
               <motion.div
                 key={value.title}
@@ -172,12 +153,12 @@ const About = () => {
                 transition={{ delay: index * 0.1 }}
               >
                 <Card className="h-full border-2 hover:border-primary/50 transition-colors">
-                  <CardContent className="pt-6 text-center">
-                    <div className="inline-flex p-4 bg-primary/10 rounded-full mb-4">
-                      <value.icon className="h-8 w-8 text-primary" />
+                  <CardContent className="pt-5 pb-5 text-center">
+                    <div className="inline-flex p-3 bg-primary/10 rounded-full mb-3">
+                      <value.icon className="h-6 w-6 text-primary" />
                     </div>
-                    <h3 className="text-xl font-bold mb-3">{value.title}</h3>
-                    <p className="text-muted-foreground">{value.description}</p>
+                    <h3 className="text-lg font-bold mb-2">{value.title}</h3>
+                    <p className="text-sm text-muted-foreground">{value.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -186,8 +167,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team/Contact CTA */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      {/* CTA */}
+      <section className="py-12 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -195,8 +176,8 @@ const About = () => {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h2 className="text-4xl font-bold mb-6">Let's Create Something Beautiful</h2>
-            <p className="text-xl mb-8 text-primary-foreground/90">
+            <h2 className="text-3xl font-bold mb-4">Let's Create Something Beautiful</h2>
+            <p className="text-lg mb-6 text-primary-foreground/90">
               Ready to transform your outdoor space? Get in touch for a free consultation. As a <a href={CHECKATRADE_CONFIG.profileUrl} target="_blank" rel="noopener noreferrer" className="underline font-semibold">Checkatrade approved business</a> with a {rating}/{CHECKATRADE_CONFIG.maxRating} rating, you can trust us to deliver exceptional results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

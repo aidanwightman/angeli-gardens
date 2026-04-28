@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import { CheckatradeWidget } from "@/components/CheckatradeWidget";
 import logo from "@/assets/logo.jpg";
 import CallButton from "@/components/CallButton";
@@ -20,17 +20,6 @@ const Footer = () => {
               Transform your outdoor space with expert landscaping and garden services across London, Surrey & Berkshire.
             </p>
             <div className="flex flex-col gap-4">
-              <div className="flex space-x-4">
-                <a href="https://www.facebook.com/p/Angeli-Gardens-Ltd-61566497512007/" target="_blank" rel="noopener noreferrer" className="text-background/80 hover:text-primary transition-colors" aria-label="Angeli Gardens Facebook">
-                  <Facebook size={20} />
-                </a>
-                <a href="#" className="text-background/80 hover:text-primary transition-colors" aria-label="Angeli Gardens Instagram">
-                  <Instagram size={20} />
-                </a>
-                <a href="#" className="text-background/80 hover:text-primary transition-colors" aria-label="Angeli Gardens LinkedIn">
-                  <Linkedin size={20} />
-                </a>
-              </div>
               <div className="pt-2">
                 <CheckatradeWidget variant="badge" className="opacity-90 hover:opacity-100" />
               </div>

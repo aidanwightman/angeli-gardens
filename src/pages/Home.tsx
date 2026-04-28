@@ -92,7 +92,7 @@ const Home = () => {
     <div className="overflow-x-hidden">
       <SEOHead />
       {/* Hero Section */}
-      <section className="relative h-[90vh] min-h-[600px] flex items-center overflow-hidden">
+      <section className="relative h-[90vh] min-h-[480px] flex items-center overflow-hidden">
         <Carousel
           plugins={[autoplayPlugin.current]}
           className="absolute inset-0 -z-10"
@@ -103,7 +103,7 @@ const Home = () => {
           <CarouselContent>
             {carouselImages.map((image, index) => (
               <CarouselItem key={index}>
-                <div className="relative h-[90vh] min-h-[600px]">
+                <div className="relative h-[90vh] min-h-[480px]">
                   <img
                     src={image}
                     alt={index === 0 ? "Angeli Gardens landscaping project in Maidenhead, Berkshire" : `Recent landscaping project ${index + 1}`}
@@ -125,7 +125,7 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             className="max-w-2xl text-background"
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-light mb-6 text-balance tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light mb-4 md:mb-6 text-balance tracking-tight">
               <span className="font-bold underline">Angeli Gardens</span> Transform Your Outdoor Space
             </h1>
             <p className="text-xl md:text-2xl mb-4 text-background/90 font-light">

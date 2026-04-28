@@ -130,7 +130,7 @@ const FAQ = () => {
             <div className="inline-flex p-4 bg-primary-foreground/10 rounded-full mb-6">
               <HelpCircle size={48} className="text-primary-foreground" />
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Frequently Asked Questions</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Frequently Asked Questions</h1>
             <p className="text-xl text-primary-foreground/90">
               Find answers to common questions about our landscaping and garden services
             </p>

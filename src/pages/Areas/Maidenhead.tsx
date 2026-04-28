@@ -72,7 +72,7 @@ const Maidenhead = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <MapPin size={32} />
-              <h1 className="text-5xl md:text-6xl font-bold">Landscaper in Maidenhead</h1>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">Landscaper in Maidenhead</h1>
             </div>
             <p className="text-xl text-primary-foreground/90 mb-4">
               Angeli Gardens — your local landscaping and garden maintenance experts, based in Maidenhead (SL6). Serving all SL1–SL9 postcodes.

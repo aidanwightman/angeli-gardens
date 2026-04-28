@@ -199,7 +199,7 @@ const Services = () => {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Angeli Gardens Services</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Angeli Gardens Services</h1>
             <p className="text-xl text-primary-foreground/90 mb-4">
               Comprehensive garden and landscaping solutions for private, communal and commercial properties across London, Surrey & Berkshire
             </p>

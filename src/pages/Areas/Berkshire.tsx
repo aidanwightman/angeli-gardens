@@ -65,7 +65,7 @@ const Berkshire = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <MapPin size={32} />
-              <h1 className="text-5xl md:text-6xl font-bold">Landscaping Services in Berkshire</h1>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">Landscaping Services in Berkshire</h1>
             </div>
             <p className="text-xl text-primary-foreground/90 mb-6">
               Expert garden maintenance, landscaping, and outdoor design services across all Berkshire areas. Checkatrade approved with {rating}/{CHECKATRADE_CONFIG.maxRating} rating.

@@ -101,8 +101,8 @@ const About = () => {
               className="relative"
             >
               <img
-                src="/portfolio-media/Angeli-Lawn.jpeg"
-                alt="Angeli Gardens pristine lawn maintenance project"
+                src="/portfolio-media/Garden-Room-Lawn.jpg"
+                alt="Angeli Gardens striped lawn and garden room project"
                 className="rounded-lg shadow-2xl w-full object-cover"
               />
             </motion.div>

@@ -43,10 +43,10 @@ const Navigation = () => {
               <Phone className="h-4 w-4" />
               <span className="hidden sm:inline">07542 973733</span>
             </CallButton>
-            <a href="mailto:Angeligardens1@gmail.com" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <Link to="/contact" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <Mail className="h-4 w-4" />
               <span className="hidden sm:inline">Angeligardens1@gmail.com</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

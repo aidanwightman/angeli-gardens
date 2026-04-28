@@ -4,7 +4,6 @@ import CallButton from "@/components/CallButton";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { SEOHead } from "@/components/SEOHead";
-import project3 from "@/assets/project-3.jpg";
 import { CHECKATRADE_CONFIG } from "@/config/checkatradeConfig";
 import { useCheckatradeData } from "@/hooks/useCheckatradeData";
 
@@ -102,9 +101,9 @@ const About = () => {
               className="relative"
             >
               <img
-                src={project3}
-                alt="Angeli Gardens landscaping project"
-                className="rounded-lg shadow-2xl"
+                src="/portfolio-media/Angeli-Lawn.jpeg"
+                alt="Angeli Gardens pristine lawn maintenance project"
+                className="rounded-lg shadow-2xl w-full object-cover"
               />
             </motion.div>
           </div>

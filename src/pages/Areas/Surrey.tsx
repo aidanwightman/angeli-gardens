@@ -46,6 +46,7 @@ const Surrey = () => {
         description={`Expert landscaping and garden services across Surrey. Checkatrade approved with ${rating}/${CHECKATRADE_CONFIG.maxRating} rating. Garden maintenance, patios, decking, fencing, and landscaping in Guildford, Woking, Epsom, Reigate, and all Surrey areas. Free quotes.`}
         keywords="landscaping Surrey, garden maintenance Surrey, landscaper Surrey, patio installation Surrey, decking Surrey, fencing Surrey, garden services Surrey, Checkatrade approved landscaper Surrey, landscaping Guildford, landscaping Woking, landscaping Epsom"
         canonical="https://www.angeligardens.co.uk/areas/surrey"
+        breadcrumbs={[{ name: "Areas", url: "https://www.angeligardens.co.uk/areas/surrey" }, { name: "Surrey", url: "https://www.angeligardens.co.uk/areas/surrey" }]}
       />
 
       {/* Hero Section */}

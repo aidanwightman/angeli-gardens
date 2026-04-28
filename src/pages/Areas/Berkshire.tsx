@@ -45,6 +45,7 @@ const Berkshire = () => {
         description={`Angeli Gardens — landscaping and garden services across Berkshire. Based in Maidenhead (SL6), serving SL1–SL9 postcodes. Checkatrade approved ${rating}/${CHECKATRADE_CONFIG.maxRating} rating. Patios, decking, fencing, lawn care, garden maintenance. Free quotes.`}
         keywords="landscaping Berkshire, garden maintenance Berkshire, landscaper Berkshire, landscaping SL1 SL2 SL3 SL4 SL5 SL6 SL7 SL8 SL9, gardener Maidenhead, gardener Slough, landscaper Windsor, patio installation Berkshire, decking Berkshire, fencing Berkshire, Checkatrade approved landscaper Berkshire, landscaping Reading, landscaping Windsor, landscaping Maidenhead"
         canonical="https://www.angeligardens.co.uk/areas/berkshire"
+        breadcrumbs={[{ name: "Areas", url: "https://www.angeligardens.co.uk/areas/berkshire" }, { name: "Berkshire", url: "https://www.angeligardens.co.uk/areas/berkshire" }]}
       />
 
       {/* Hero Section */}

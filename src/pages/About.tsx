@@ -43,10 +43,11 @@ const About = () => {
   return (
     <div>
       <SEOHead
-        title="About Angeli Gardens | Expert Landscapers in London, Surrey & Berkshire"
-        description="Learn about Angeli Gardens - expert landscapers serving London, Surrey & Berkshire for over 10 years. Checkatrade approved with 500+ projects completed. Quality craftsmanship, customer focus, and sustainability."
-        keywords="about Angeli Gardens, landscaper London, garden services Surrey, landscaping company Berkshire, professional landscapers"
+        title="About Angeli Gardens | Local Landscapers Based in Maidenhead, Berkshire"
+        description="Angeli Gardens — founded by Marley Angeli, based in Maidenhead SL6. Checkatrade approved landscapers with 10+ years experience and 500+ projects across London, Surrey & Berkshire. Fully insured, free quotes."
+        keywords="about Angeli Gardens, Marley Angeli landscaper, landscaper Maidenhead, garden services Berkshire, landscaping company London Surrey, professional landscapers SL6"
         canonical="https://www.angeligardens.co.uk/about"
+        breadcrumbs={[{ name: "About", url: "https://www.angeligardens.co.uk/about" }]}
       />
       {/* Hero Section */}
       <section className="relative py-20 bg-primary text-primary-foreground">

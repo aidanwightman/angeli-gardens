@@ -38,13 +38,22 @@ const Portfolio = () => {
   return (
     <div className="bg-background min-h-screen">
       <SEOHead
-        title="Portfolio | Angeli Gardens Landscaping & Maintenance"
-        description="View our recent landscaping and garden projects. Quality transformations including bespoke sheds, patios, and lawn care by Angeli Gardens."
-        keywords="landscaping portfolio, garden photos, patio examples, garden boat, Angeli Gardens gallery"
+        title="Portfolio | Landscaping & Garden Projects | Angeli Gardens Maidenhead"
+        description="Browse Angeli Gardens' portfolio of completed landscaping projects. Patios, lawns, decking, fencing, garden rooms and more across Maidenhead, Berkshire, London and Surrey. Checkatrade approved."
+        keywords="landscaping portfolio, garden photos Maidenhead, patio examples Berkshire, lawn care portfolio, Angeli Gardens gallery, landscaping before after SL6"
         canonical="https://www.angeligardens.co.uk/portfolio"
+        breadcrumbs={[{ name: "Portfolio", url: "https://www.angeligardens.co.uk/portfolio" }]}
       />
 
-      {/* Portfolio Banner Removed - Navigation is sufficient */}
+      {/* Page Header */}
+      <div className="py-12 bg-muted/20 border-b">
+        <div className="container mx-auto px-4 text-center max-w-3xl">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Work</h1>
+          <p className="text-lg text-muted-foreground">
+            A selection of completed landscaping and garden projects by Angeli Gardens across Maidenhead, Berkshire, London and Surrey. Every project is delivered with the same care and attention to detail.
+          </p>
+        </div>
+      </div>
 
       {/* Media Feed */}
       <main className="container mx-auto px-4 py-12">

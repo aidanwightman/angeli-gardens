@@ -48,6 +48,7 @@ const Contact = () => {
         description="Contact Angeli Gardens for a free, no-obligation quote. Expert landscaping and garden services across London, Surrey & Berkshire. Call 07542 973733 or request a quote online. Checkatrade approved."
         keywords="contact Angeli Gardens, free quote landscaping, landscaper phone number, garden services contact, landscaping quote London, garden maintenance quote Surrey"
         canonical="https://www.angeligardens.co.uk/contact"
+        breadcrumbs={[{ name: "Contact", url: "https://www.angeligardens.co.uk/contact" }]}
       />
       {/* Hero Section */}
       <section className="relative py-20 bg-primary text-primary-foreground overflow-hidden">

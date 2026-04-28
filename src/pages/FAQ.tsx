@@ -109,6 +109,7 @@ const FAQ = () => {
         description="Frequently asked questions about Angeli Gardens landscaping services. Learn about our services, pricing, areas we serve, Checkatrade approval, and more. Get answers to common questions about garden maintenance, landscaping, and our work across London, Surrey & Berkshire."
         keywords="landscaping FAQ, garden services questions, landscaping London FAQ, garden maintenance Surrey questions, Checkatrade approved landscaper FAQ, landscaping Berkshire FAQ"
         canonical="https://www.angeligardens.co.uk/faq"
+        breadcrumbs={[{ name: "FAQ", url: "https://www.angeligardens.co.uk/faq" }]}
       />
 
       {/* Hero Section */}

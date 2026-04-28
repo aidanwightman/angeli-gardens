@@ -106,8 +106,10 @@ const Home = () => {
                 <div className="relative h-[90vh] min-h-[600px]">
                   <img
                     src={image}
-                    alt={`Recent landscaping project ${index + 1}`}
+                    alt={index === 0 ? "Angeli Gardens landscaping project in Maidenhead, Berkshire" : `Recent landscaping project ${index + 1}`}
                     className="w-full h-full object-cover"
+                    loading={index === 0 ? "eager" : "lazy"}
+                    fetchPriority={index === 0 ? "high" : "auto"}
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-foreground/70 to-foreground/30" />
                 </div>

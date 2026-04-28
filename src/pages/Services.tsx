@@ -121,6 +121,7 @@ const Services = () => {
         description={`Professional landscaping and garden services across London, Surrey & Berkshire. Checkatrade approved with ${rating}/${CHECKATRADE_CONFIG.maxRating} rating. Garden maintenance, patios, decking, fencing, turfing, and more. Free quotes.`}
         keywords="landscaping London, garden maintenance Surrey, landscaping Berkshire, patios London, decking Surrey, fencing Berkshire, turfing London, hedge trimming Surrey, tree pruning Berkshire, garden clearance London, Checkatrade approved landscaper"
         canonical="https://www.angeligardens.co.uk/services"
+        breadcrumbs={[{ name: "Services", url: "https://www.angeligardens.co.uk/services" }]}
       />
       {/* Hero Section */}
       <section className="relative py-20 bg-primary text-primary-foreground overflow-hidden">

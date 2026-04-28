@@ -47,6 +47,7 @@ const London = () => {
         description={`Expert landscaping and garden services across London. Checkatrade approved with ${rating}/${CHECKATRADE_CONFIG.maxRating} rating. Garden maintenance, patios, decking, fencing, and landscaping in Kensington, Richmond, Wimbledon, and all London areas. Free quotes.`}
         keywords="landscaping London, garden maintenance London, landscaper London, patio installation London, decking London, fencing London, garden services London, Checkatrade approved landscaper London, landscaping Kensington, landscaping Richmond, landscaping Wimbledon"
         canonical="https://www.angeligardens.co.uk/areas/london"
+        breadcrumbs={[{ name: "Areas", url: "https://www.angeligardens.co.uk/areas/london" }, { name: "London", url: "https://www.angeligardens.co.uk/areas/london" }]}
       />
 
       {/* Hero Section */}

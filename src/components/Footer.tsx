@@ -70,7 +70,7 @@ const Footer = () => {
                 <span className="text-background/80">Hampton · Kew · Barnes · Putney</span>
               </li>
               <li>
-                <span className="text-background/80">Wimbledon · Surbiton · Esher</span>
+                <span className="text-background/80">Wimbledon · Surbiton · East Sheen</span>
               </li>
               <li className="text-background/60 text-xs font-semibold uppercase tracking-wide pt-2">All Areas</li>
               <li>

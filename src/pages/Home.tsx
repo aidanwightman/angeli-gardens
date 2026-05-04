@@ -198,7 +198,7 @@ const Home = () => {
               "Richmond", "Twickenham", "Kingston upon Thames", "St Margarets",
               "Hampton", "East Twickenham", "Petersham", "Ham", "Kew",
               "Barnes", "Putney", "Wimbledon", "Surbiton", "Esher",
-              "Cobham", "New Malden", "Strawberry Hill", "Whitton",
+              "East Sheen", "New Malden", "Strawberry Hill", "Whitton",
               "Isleworth", "Brentford",
             ].map((area, i) => (
               <motion.span

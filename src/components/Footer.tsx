@@ -62,8 +62,19 @@ const Footer = () => {
           <div>
             <h3 className="font-heading text-lg font-semibold mb-4">Areas We Serve</h3>
             <ul className="space-y-2 text-sm">
+              <li className="text-background/60 text-xs font-semibold uppercase tracking-wide pt-1">Local</li>
               <li>
-                <Link to="/areas/london" className="text-background/80 hover:text-primary transition-colors font-semibold">
+                <span className="text-background/80">Richmond · Twickenham · Kingston</span>
+              </li>
+              <li>
+                <span className="text-background/80">Hampton · Kew · Barnes · Putney</span>
+              </li>
+              <li>
+                <span className="text-background/80">Wimbledon · Surbiton · Esher</span>
+              </li>
+              <li className="text-background/60 text-xs font-semibold uppercase tracking-wide pt-2">All Areas</li>
+              <li>
+                <Link to="/areas/london" className="text-background/80 hover:text-primary transition-colors">
                   London
                 </Link>
               </li>
@@ -75,16 +86,6 @@ const Footer = () => {
               <li>
                 <Link to="/areas/berkshire" className="text-background/80 hover:text-primary transition-colors">
                   Berkshire (SL1–SL9)
-                </Link>
-              </li>
-              <li>
-                <Link to="/areas/maidenhead" className="text-background/80 hover:text-primary transition-colors">
-                  Maidenhead (SL6)
-                </Link>
-              </li>
-              <li className="pt-2">
-                <Link to="/faq" className="text-background/80 hover:text-primary transition-colors">
-                  FAQ
                 </Link>
               </li>
             </ul>

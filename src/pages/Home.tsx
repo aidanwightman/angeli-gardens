@@ -146,12 +146,7 @@ const Home = () => {
             <div className="mt-8 flex flex-col sm:flex-row items-center gap-4 text-sm text-background/80">
               <div className="flex items-center gap-2">
                 <MapPin size={18} />
-                <span>Based in St Margarets, TW1 · serving</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Link to="/areas/london" className="underline hover:text-background">London</Link>
-                <span>•</span>
-                <Link to="/areas/surrey" className="underline hover:text-background">Surrey</Link>
+                <span>Based in St Margarets, TW1 · serving Richmond · Twickenham · Kingston & beyond</span>
               </div>
             </div>
           </motion.div>
@@ -182,6 +177,52 @@ const Home = () => {
       {/* Checkatrade Marquee Section */}
       <section className="py-4 bg-background overflow-hidden">
         <CheckatradeMarquee />
+      </section>
+
+      {/* Local Service Areas */}
+      <section className="py-12 bg-muted/30 border-y">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-8"
+          >
+            <h2 className="text-2xl md:text-3xl font-bold mb-2">Areas We Serve</h2>
+            <p className="text-muted-foreground">
+              Based in St Margarets (TW1) — covering Richmond, Twickenham, Kingston and surrounding areas
+            </p>
+          </motion.div>
+          <div className="flex flex-wrap justify-center gap-2 max-w-4xl mx-auto">
+            {[
+              "Richmond", "Twickenham", "Kingston upon Thames", "St Margarets",
+              "Hampton", "East Twickenham", "Petersham", "Ham", "Kew",
+              "Barnes", "Putney", "Wimbledon", "Surbiton", "Esher",
+              "Cobham", "New Malden", "Strawberry Hill", "Whitton",
+              "Isleworth", "Brentford",
+            ].map((area, i) => (
+              <motion.span
+                key={area}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.03 }}
+                className="px-3 py-1.5 bg-background border border-border rounded-full text-sm font-medium text-foreground/80 hover:border-primary hover:text-primary transition-colors"
+              >
+                {area}
+              </motion.span>
+            ))}
+          </div>
+          <div className="text-center mt-6">
+            <Link to="/areas/london" className="text-primary hover:underline text-sm font-medium">
+              View all London areas →
+            </Link>
+            <span className="mx-3 text-muted-foreground">·</span>
+            <Link to="/areas/surrey" className="text-primary hover:underline text-sm font-medium">
+              View Surrey areas →
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* CTA Section */}

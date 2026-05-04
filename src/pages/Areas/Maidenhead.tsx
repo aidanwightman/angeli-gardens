@@ -75,7 +75,7 @@ const Maidenhead = () => {
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">Landscaper in Maidenhead</h1>
             </div>
             <p className="text-xl text-primary-foreground/90 mb-4">
-              Angeli Gardens — your local landscaping and garden maintenance experts, based in Maidenhead (SL6). Serving all SL1–SL9 postcodes.
+              Angeli Gardens — your local landscaping and garden maintenance experts serving Maidenhead (SL6) and all SL1–SL9 postcodes.
             </p>
             <p className="text-lg text-primary-foreground/80 mb-6">
               Checkatrade approved with {rating}/{CHECKATRADE_CONFIG.maxRating} rating · Fully insured · Free quotes
@@ -111,7 +111,7 @@ const Maidenhead = () => {
             <h2 className="text-3xl font-bold mb-6">Your Local Maidenhead Landscaper</h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
               <p>
-                Angeli Gardens is based in <strong>Maidenhead, Berkshire (SL6)</strong> and provides professional landscaping and garden services throughout the <strong>SL postcode area</strong>. Founded by Marley Angeli with over 10 years of experience, we've transformed hundreds of gardens across Maidenhead, Slough, Windsor, Marlow, and the surrounding SL1–SL9 postcode districts.
+                Angeli Gardens provides professional landscaping and garden services throughout <strong>Maidenhead (SL6)</strong> and the wider <strong>SL postcode area</strong>. Founded by Marley Angeli with over 10 years of experience, we've transformed hundreds of gardens across Maidenhead, Slough, Windsor, Marlow, and the surrounding SL1–SL9 postcode districts.
               </p>
               <p>
                 Whether you need regular garden maintenance in <strong>SL6 Maidenhead</strong>, a new patio in <strong>SL4 Windsor</strong>, decking in <strong>SL7 Marlow</strong>, or a complete garden makeover in <strong>SL1 Slough</strong>, we bring the same high standard of craftsmanship and attention to detail to every project.
@@ -249,7 +249,7 @@ const Maidenhead = () => {
             <h2 className="text-3xl font-bold mb-8 text-center">Why Maidenhead Homeowners Choose Angeli Gardens</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
-                { title: "Locally Based in SL6", body: "We're based right here in Maidenhead — no long travel time, faster response, and we know the local area well." },
+                { title: "Serving Maidenhead (SL6)", body: "We regularly work across Maidenhead and all SL postcodes — fast response times and an in-depth knowledge of the local area." },
                 { title: "Checkatrade Approved", body: `Independently verified reviews. Our ${rating}/${CHECKATRADE_CONFIG.maxRating} Checkatrade rating means you can book with confidence.` },
                 { title: "Fully Insured", body: "Full public liability insurance on every job — your property is always protected." },
                 { title: "Green Waste Licensed", body: "Licensed green waste carrier. We remove and responsibly dispose of all garden waste." },
@@ -287,7 +287,7 @@ const Maidenhead = () => {
           >
             <h2 className="text-4xl font-bold mb-6">Get a Free Quote for Your Maidenhead Garden</h2>
             <p className="text-xl mb-2 text-primary-foreground/90">
-              Based in SL6 — quick response across SL1–SL9 and surrounding areas.
+              Covering SL6 Maidenhead and all SL1–SL9 postcodes and surrounding areas.
             </p>
             <p className="text-lg mb-8 text-primary-foreground/80">
               Call us, send a WhatsApp, or fill in our quick contact form — we'll get back to you within 24 hours.

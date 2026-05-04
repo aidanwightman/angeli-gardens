@@ -42,9 +42,9 @@ const About = () => {
   return (
     <div>
       <SEOHead
-        title="About Angeli Gardens | Local Landscapers Based in Maidenhead, Berkshire"
-        description="Angeli Gardens — founded by Marley Angeli, based in Maidenhead SL6. Checkatrade approved landscapers with 10+ years experience and 500+ projects across London, Surrey & Berkshire. Fully insured, free quotes."
-        keywords="about Angeli Gardens, Marley Angeli landscaper, landscaper Maidenhead, garden services Berkshire, landscaping company London Surrey, professional landscapers SL6"
+        title="About Angeli Gardens | Landscapers Based in St Margarets, Twickenham"
+        description="Angeli Gardens — founded by Marley Angeli, based in St Margarets, Twickenham (TW1). Checkatrade approved landscapers with 10+ years experience and 500+ projects across London, Surrey & Berkshire. Fully insured, free quotes."
+        keywords="about Angeli Gardens, Marley Angeli landscaper, landscaper London, garden services Surrey, landscaping company London Surrey, professional landscapers TW1"
         canonical="https://www.angeligardens.co.uk/about"
         breadcrumbs={[{ name: "About", url: "https://www.angeligardens.co.uk/about" }]}
       />

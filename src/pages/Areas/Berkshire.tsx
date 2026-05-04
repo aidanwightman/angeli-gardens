@@ -42,7 +42,7 @@ const Berkshire = () => {
     <div>
       <SEOHead
         title="Landscaping Services in Berkshire | Angeli Gardens | Checkatrade Approved"
-        description={`Angeli Gardens — landscaping and garden services across Berkshire. Based in Maidenhead (SL6), serving SL1–SL9 postcodes. Checkatrade approved ${rating}/${CHECKATRADE_CONFIG.maxRating} rating. Patios, decking, fencing, lawn care, garden maintenance. Free quotes.`}
+        description={`Angeli Gardens — landscaping and garden services across Berkshire. Serving SL1–SL9 postcodes. Checkatrade approved ${rating}/${CHECKATRADE_CONFIG.maxRating} rating. Patios, decking, fencing, lawn care, garden maintenance. Free quotes.`}
         keywords="landscaping Berkshire, garden maintenance Berkshire, landscaper Berkshire, landscaping SL1 SL2 SL3 SL4 SL5 SL6 SL7 SL8 SL9, gardener Maidenhead, gardener Slough, landscaper Windsor, patio installation Berkshire, decking Berkshire, fencing Berkshire, Checkatrade approved landscaper Berkshire, landscaping Reading, landscaping Windsor, landscaping Maidenhead"
         canonical="https://www.angeligardens.co.uk/areas/berkshire"
         breadcrumbs={[{ name: "Areas", url: "https://www.angeligardens.co.uk/areas/berkshire" }, { name: "Berkshire", url: "https://www.angeligardens.co.uk/areas/berkshire" }]}
@@ -101,7 +101,7 @@ const Berkshire = () => {
           >
             <h2 className="text-3xl font-bold mb-3">Landscaping Across SL Postcodes</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Based in <strong>Maidenhead (SL6)</strong>, we cover all SL postcode districts —
+              Regularly serving all SL postcode districts —
               from Slough and Windsor to Marlow and Gerrards Cross.
             </p>
           </motion.div>

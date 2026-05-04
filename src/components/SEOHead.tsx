@@ -21,9 +21,9 @@ const BASE_URL = 'https://www.angeligardens.co.uk';
 const DEFAULT_OG_IMAGE = `${BASE_URL}/og-image.jpg`;
 
 export const SEOHead = ({
-  title = "Angeli Gardens | Landscaping & Garden Services | Maidenhead, London, Surrey & Berkshire",
+  title = "Angeli Gardens | Landscaping & Garden Services | London, Surrey & Berkshire",
   description,
-  keywords = "Angeli Gardens, landscaper Maidenhead, landscaping London, garden maintenance Surrey, landscaping Berkshire, gardener SL6, Checkatrade approved landscaper",
+  keywords = "Angeli Gardens, landscaper London, landscaping Surrey, garden maintenance Berkshire, landscaper TW1, landscaper St Margarets, Checkatrade approved landscaper",
   canonical = BASE_URL,
   ogImage = DEFAULT_OG_IMAGE,
   ogType = "website",
@@ -31,7 +31,7 @@ export const SEOHead = ({
 }: SEOHeadProps) => {
   const { rating } = useCheckatradeData();
 
-  const defaultDescription = `Angeli Gardens — Checkatrade approved landscapers based in Maidenhead (SL6). Expert garden maintenance, patios, decking & landscaping across SL1–SL9, London, Surrey & Berkshire. Rated ${rating}/${CHECKATRADE_CONFIG.maxRating}. Free quotes.`;
+  const defaultDescription = `Angeli Gardens — Checkatrade approved landscapers based in St Margarets, Twickenham (TW1). Expert garden maintenance, patios, decking & landscaping across London, Surrey & Berkshire. Rated ${rating}/${CHECKATRADE_CONFIG.maxRating}. Free quotes.`;
 
   const finalDescription = description || defaultDescription;
 

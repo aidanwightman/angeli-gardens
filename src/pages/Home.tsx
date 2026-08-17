@@ -213,13 +213,24 @@ const Home = () => {
               </motion.span>
             ))}
           </div>
-          <div className="text-center mt-6">
-            <Link to="/areas/london" className="text-primary hover:underline text-sm font-medium">
-              View all London areas →
+          <div className="text-center mt-6 flex flex-wrap justify-center gap-x-4 gap-y-2">
+            <Link to="/areas/richmond" className="text-primary hover:underline text-sm font-medium">
+              Richmond →
             </Link>
-            <span className="mx-3 text-muted-foreground">·</span>
+            <Link to="/areas/twickenham" className="text-primary hover:underline text-sm font-medium">
+              Twickenham →
+            </Link>
+            <Link to="/areas/kingston" className="text-primary hover:underline text-sm font-medium">
+              Kingston →
+            </Link>
+            <Link to="/areas/london" className="text-primary hover:underline text-sm font-medium">
+              London →
+            </Link>
             <Link to="/areas/surrey" className="text-primary hover:underline text-sm font-medium">
-              View Surrey areas →
+              Surrey →
+            </Link>
+            <Link to="/areas/berkshire" className="text-primary hover:underline text-sm font-medium">
+              Berkshire →
             </Link>
           </div>
         </div>

@@ -74,6 +74,21 @@ const Footer = () => {
               </li>
               <li className="text-background/60 text-xs font-semibold uppercase tracking-wide pt-2">All Areas</li>
               <li>
+                <Link to="/areas/richmond" className="text-background/80 hover:text-primary transition-colors">
+                  Richmond
+                </Link>
+              </li>
+              <li>
+                <Link to="/areas/twickenham" className="text-background/80 hover:text-primary transition-colors">
+                  Twickenham
+                </Link>
+              </li>
+              <li>
+                <Link to="/areas/kingston" className="text-background/80 hover:text-primary transition-colors">
+                  Kingston
+                </Link>
+              </li>
+              <li>
                 <Link to="/areas/london" className="text-background/80 hover:text-primary transition-colors">
                   London
                 </Link>

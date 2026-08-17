@@ -70,6 +70,30 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- Area: Richmond -->
+  <url>
+    <loc>https://www.angeligardens.co.uk/areas/richmond</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Area: Twickenham -->
+  <url>
+    <loc>https://www.angeligardens.co.uk/areas/twickenham</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Area: Kingston -->
+  <url>
+    <loc>https://www.angeligardens.co.uk/areas/kingston</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Area: Berkshire -->
   <url>
     <loc>https://www.angeligardens.co.uk/areas/berkshire</loc>

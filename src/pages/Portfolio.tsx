@@ -38,9 +38,9 @@ const Portfolio = () => {
   return (
     <div className="bg-background min-h-screen">
       <SEOHead
-        title="Portfolio | Landscaping & Garden Projects | Angeli Gardens Maidenhead"
-        description="Browse Angeli Gardens' portfolio of completed landscaping projects. Patios, lawns, decking, fencing, garden rooms and more across Maidenhead, Berkshire, London and Surrey. Checkatrade approved."
-        keywords="landscaping portfolio, garden photos Maidenhead, patio examples Berkshire, lawn care portfolio, Angeli Gardens gallery, landscaping before after SL6"
+        title="Portfolio | Landscaping & Garden Projects | Angeli Gardens"
+        description="Browse Angeli Gardens' portfolio of completed landscaping projects. Patios, lawns, decking, fencing, garden rooms and more across London, Surrey & Berkshire. Checkatrade approved."
+        keywords="landscaping portfolio, garden photos London, patio examples Surrey, lawn care portfolio, Angeli Gardens gallery, landscaping before after Berkshire"
         canonical="https://www.angeligardens.co.uk/portfolio"
         breadcrumbs={[{ name: "Portfolio", url: "https://www.angeligardens.co.uk/portfolio" }]}
       />

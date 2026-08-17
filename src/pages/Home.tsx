@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Phone, MapPin, Star, ExternalLink } from "lucide-react";
 import CallButton from "@/components/CallButton";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { LogoLoop } from "@/components/LogoLoop";
 import {
   Carousel,
@@ -134,7 +135,7 @@ const Home = () => {
             <p className="text-lg md:text-xl mb-8 text-background/80 font-light">
               <a href={CHECKATRADE_CONFIG.profileUrl} target="_blank" rel="noopener noreferrer" className="underline font-semibold hover:text-background">Checkatrade approved</a> with {rating}/{CHECKATRADE_CONFIG.maxRating} rating
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4">
               <Button size="lg" asChild className="text-lg h-14 px-8">
                 <Link to="/contact">Get a Free Quote</Link>
               </Button>
@@ -142,6 +143,14 @@ const Home = () => {
                 <Phone size={20} />
                 Call Now
               </CallButton>
+              <WhatsAppButton
+                size="lg"
+                variant="outline"
+                className="text-lg h-14 px-8 bg-background/10 backdrop-blur-sm border-background/30 text-background hover:bg-background/20 hover:text-background"
+                message={encodeURIComponent("Hi Angeli Gardens, I'd like a free quote for my garden please.")}
+              >
+                WhatsApp Us
+              </WhatsAppButton>
             </div>
             <div className="mt-8 flex flex-col sm:flex-row items-center gap-4 text-sm text-background/80">
               <div className="flex items-center gap-2">

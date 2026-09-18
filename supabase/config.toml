@@ -1,1 +1,4 @@
-project_id = "adamlmilhqvwrzweqfvp"
+# Must match the project the live site talks to (VITE_SUPABASE_URL in .env).
+# Was adamlmilhqvwrzweqfvp, an older project — CLI commands run from here would
+# have targeted the wrong database.
+project_id = "leygyadgdqgmqatlaklv"

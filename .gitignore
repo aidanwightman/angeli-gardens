@@ -23,3 +23,10 @@ dist-ssr
 *.sln
 *.sw?
 .vercel
+
+# TypeScript incremental build cache
+*.tsbuildinfo
+
+# Local backup copies kept alongside a file being edited
+*.bak
+*.gtagbak
